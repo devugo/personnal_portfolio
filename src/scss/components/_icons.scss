@@ -1,0 +1,45 @@
+@keyframes rotate-season {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.rotate-season {
+    -webkit-animation-name: rotate-season; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+    -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+    -webkit-animation-timing-function: linear; /* Chrome, Safari, Opera */
+    animation-name: rotate-season;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.icons {
+    position: fixed;
+    bottom: 20px;
+    right: 15px;
+
+    &-icon {
+        width: 40px;
+        height: 40px;
+        background-color: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 1px 5px rgb(110, 110, 110);
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        i {
+            font-size: 20px;
+            @include transition-ease;
+        }
+    }
+}

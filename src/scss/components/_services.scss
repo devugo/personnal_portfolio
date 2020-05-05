@@ -1,0 +1,99 @@
+.services {
+    margin-top: -5%;
+    padding: 1.2rem;
+    padding-top: 60px;
+    margin-bottom: 10%;
+    background-color: #f0eefd;
+    @include transition-ease;
+
+    &-container {
+        overflow: hidden;
+
+        &__do {
+            margin: 45px 0;
+            font-size: 20px;
+        }
+
+        &__content {
+            @include transition-ease;
+            
+            .services-card {
+                background-color: white;
+                margin-bottom: 30px;
+                opacity: 0;
+                transform: translateX(-100vw);
+                @include transition-ease;
+
+                &.show-content {
+                    transition-duration: 1s;
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+
+                &:hover {
+                    // transition-duration: 0.5s;
+                    // transition-delay: 0s;
+                    // transform: translateY(-10px) !important;
+                }
+
+                .image {  
+                    margin-bottom: 5%;
+                    img {
+                        width: 60%;
+                        height: 150px;
+                    }
+                }
+
+                h5 {
+                    color: $secondary-color;
+                    font-size: 19px;
+                }
+
+                ul {
+                    padding: 0 30px;
+                }
+            }
+        }
+    }
+}
+
+@include media-md {
+    .services {
+        padding-top: 80px;
+        &-container {
+
+            &__title {
+                margin-left: 9%;
+                font-size: 25px;
+            }
+
+            &__body {
+                display: flex;
+                justify-content: center;
+            }
+    
+            &__content {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                width: 85%;
+
+                .services-card {
+                    width: 30%;
+                }
+            }
+        }
+    }
+}
+
+@include media-lg {
+    .services {
+        padding-top: 100px;
+    }
+}
+
+@for $i from 1 through 3 {
+    .services-card.show-content:nth-child(#{$i}) {
+        transition-delay: ( $i * 0.3s) + 0.15s !important;
+    }
+}

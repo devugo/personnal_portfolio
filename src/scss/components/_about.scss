@@ -1,0 +1,168 @@
+@keyframes skills_zoom {
+    from {
+        -ms-transform: scale(1,1); /* IE 9 */
+        -webkit-transform: scale(1,1); /* Safari */
+        transform: scale(1,1);
+    }
+    to {
+        -ms-transform: scale(1.1,1.1); /* IE 9 */
+        -webkit-transform: scale(1.1,1.1); /* Safari */
+        transform: scale(1.1,1.1);
+    }
+}
+
+.about {
+    background-color: white;
+    // background-color: red;
+    opacity: 5;
+    transform: skewY(4deg);
+    margin-top: -22px;
+    padding: 1.2rem;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    @include transition-ease;
+    // font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    // font-family: monospace;
+
+    &-container {
+        transform: skewY(-4deg);
+        
+        &__title {
+            margin-bottom: 20%;
+            @include transition-ease;
+        }
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            @include transition-ease;
+
+            &-img {
+                img {
+                    width: 60%;
+                }
+            }
+
+            &-description {
+                padding-left: 10px;
+                padding-right: 10px;
+                .summary {
+                    padding: 5px;
+                    p {
+                        font-size: 18px;
+                    }
+                }
+                .skills-icons {
+                    .tag-me {
+                        -webkit-animation-name: skills_zoom; /* Chrome, Safari, Opera */
+                        -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+                        -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+                        -webkit-animation-direction: alternate; /* Chrome, Safari, Opera */
+                        animation-name: skills_zoom;
+                        animation-duration: 2s;
+                        animation-iteration-count: infinite;
+                        animation-direction: alternate;
+                        margin: 5px;
+                    }
+                }
+                
+                .download {
+                    margin-top: 10%; 
+                    margin-bottom: 25px;
+                    a {
+                        background-color: $secondary-color;
+                        padding: 10px;
+                        border: 0;
+                        color: white;
+                        box-shadow: 0px 1px 10px rgb(110, 110, 110);
+                    }
+                }
+
+                @for $i from 1 through 8 {
+                    .tag-me:nth-child(#{$i}) {
+                        animation-delay: ( $i * 1s - 1s);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-sm {
+    .about {
+        margin-top: -40px;
+
+        
+        &-container {
+
+            &__content {
+                margin-top: -60px;
+            }
+        }
+    }
+}
+
+@include media-md {
+    .about {
+        margin: -70px 0 0 0;
+
+        &-container {
+            display: block;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            // margin-top: -50px;
+            // margin-bottom: -50px;
+            // text-align: center;
+
+            &__title {
+                // background-color: green;
+                height: 50px;
+                margin: 0;
+                padding: 0;
+                margin-left: 9%;
+                font-size: 25px;
+            }
+
+            &__content {
+                flex-direction: row;
+                // background-color: rgb(172, 172, 172);
+                background-color: #fff9ef;
+                width: 80%;
+                margin: 50px auto auto auto;
+                padding: 20px 20px 25px 20px;
+
+                &-img {
+                    width: 50%;
+                    // background-color: grey;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    img {
+                        width: 300px;
+                    }
+                }
+
+                &-description {
+                    width: 50%;
+
+                    .download {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-lg {
+    .about {
+        padding-bottom: 190px;
+        &-container {
+            margin-top: -100px;
+            margin-bottom: -100px;
+        }
+    }
+}

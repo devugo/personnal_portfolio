@@ -1,0 +1,91 @@
+.contact {
+    padding: 1.2rem;
+    padding-top: 40px;
+    padding-bottom: 100px;
+    background-color: #fff9ef;
+    // margin-bottom: 10%;
+    margin-top: -10%;
+    @include transition-ease;
+
+    h5 {
+        font-size: 20px;
+        color: $secondary-color;
+    }
+    
+    &-content {
+        margin-top: 30px;;
+        display: flex;
+        flex-direction: column;
+
+        a {
+            color: inherit;
+
+            &:hover {
+                color: inherit;
+            }
+        }
+
+        &__type {
+            position: relative;
+            margin: 20px 0;
+            @include transition-ease;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 0px;
+                height: 3px;
+                left: calc(50% - 70px);
+                top: 60px;
+                background-color: $primary-color;
+                @include transition-ease;
+            }
+            &:hover {
+                cursor: pointer;
+                // transform: scale(1.1);
+
+                i {
+                    transform: scale(1.1);
+                    -webkit-animation-name: shake; /* Chrome, Safari, Opera */
+                    -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+                    -webkit-animation-direction: alternate; /* Chrome, Safari, Opera */
+                    animation-name: shake;
+                    animation-duration: 2s;
+                    animation-direction: alternate;
+                }
+                p {
+                    font-size: 15px;
+                }
+                &::before {
+                    width: 150px;
+                }
+            }
+
+            i {
+                font-size: 30px;
+                color: $secondary-color;
+                @include transition-ease;
+            }
+            p{
+                @include transition-ease;
+            }
+        }
+
+    }
+}
+
+@include media-md {
+    .contact {
+        h5 {
+            font-size: 25px;
+            margin-left: 9%;
+        }
+    }
+}
+
+@include media-lg {
+    .contact {
+        margin-bottom: -100px;
+        padding-bottom: 130px;
+    }
+}
