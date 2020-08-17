@@ -175,14 +175,14 @@
             }
             p.bio {
                 margin-top: -10px;
+                margin-bottom: 5%;
             }
-            button {
+            a.btn {
                 @include transition-ease;
                 background-color: $primary-color;
                 color: white;
                 border: 0;
-                padding:  7px 15px;
-                margin-top: 5%;
+                padding:  10px 15px;
                 box-shadow: 0px 1px 10px rgb(39, 39, 39);
 
                 &:hover {
@@ -306,7 +306,6 @@
 @include media-md {
     .home {
         padding: 150px 0;
-        // background: blue !important;
         &-column {
             flex-direction: row;
             width: 100%;
@@ -322,15 +321,16 @@
                 p.skill span {
                     font-size: 22px;
                 }
-                button {
-                    margin-top: 50px;
+                p.bio{
+                    margin-bottom: 50px;
+                }
+                a.btn {
                     padding: 16px;
                     font-weight: 1000;
                 }
             }
 
             &__profile {
-                // background-color: blue;
                 margin: 0;
                 padding: 0;
                
@@ -338,12 +338,6 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    // position: relative;
-                    // background-color: red;
-                    // width: 100%;
-                    // height: 100%;
-                    // z-index: 2;
-                    // background-color: blue;
 
                     img {
                         width: 300px;
@@ -388,8 +382,10 @@
                         font-size: 22px;
                     }
                 } 
-                button {
-                    margin-top: 50px;
+                p.bio {
+                    margin-bottom: 50px;
+                }
+                a.btn {
                     padding: 16px;
                     font-weight: 1000;
                 }

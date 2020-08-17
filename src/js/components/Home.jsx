@@ -106,7 +106,7 @@ const Home = props => {
                     <h4>Ezenwankwo Ugochukwu</h4>
                     <p className="skill">I'm a <span>{currentSkill}</span></p>
                     <p className="bio"> Problem solving, responsive designs, robust APIs and scalabale softwares, testing and maintenace of applications.</p>
-                    <button className="btn">GET IN TOUCH</button>
+                    <a target="_blank" href="https://www.upwork.com/freelancers/~011c8bdfb541a568e5?viewMode=1" className="btn">GET IN TOUCH</a>
                 </div>
                 <div className="home-column__profile">
                     <div className="home-column__profile-image">

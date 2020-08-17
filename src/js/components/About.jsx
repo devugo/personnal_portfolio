@@ -41,7 +41,7 @@ const About = () => {
                             <Tag className="tag-me" color="yellow">SQL</Tag>
                         </div>
                         <div className="download">
-                            <a className="btn" target="_blank" href="https://drive.google.com/open?id=1V_V_Pv-xKss9cauOL_vwd3s2femTAXJk">DOWNLOAD CV</a>
+                            <a className="btn" target="_blank" href="https://drive.google.com/open?id=1V_V_Pv-xKss9cauOL_vwd3s2femTAXJk">VIEW CV</a>
                         </div>
                     </div>
                 </div>
