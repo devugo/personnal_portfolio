@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Tag } from 'antd';
-import AboutImg from '../../images/about2.png';
+import AboutImg2 from '../../images/about.svg';
 
 const About = () => {
     return (
@@ -10,7 +10,7 @@ const About = () => {
                 <h3 className="about-container__title short-underline section-title" id="about-container__title">ABOUT ME</h3>
                 <div className="about-container__content" id="about-container__content">
                     <div className="about-container__content-img center-content">
-                        <img src={AboutImg} className="top-in-shake" />
+                        <img src={AboutImg2} className="top-in-shake" />
                     </div>
                     <div className="about-container__content-description">
                         <div className="summary">

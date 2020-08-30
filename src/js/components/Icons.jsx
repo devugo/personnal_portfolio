@@ -25,6 +25,9 @@ const Icons = props => {
             document.getElementsByClassName('services-card')[1].style.backgroundColor = tan;
             document.getElementsByClassName('services-card')[2].style.backgroundColor = tan;
             document.getElementById('services-container__title').style.color = 'white';
+            document.getElementsByClassName('service-title')[0].style.color = 'white';
+            document.getElementsByClassName('service-title')[1].style.color = 'white';
+            document.getElementsByClassName('service-title')[2].style.color = 'white';
 
             //  Portfolio style in dark mode
             document.getElementById('portfolio').style.backgroundColor = tan;
@@ -40,7 +43,9 @@ const Icons = props => {
             document.getElementById('nav-menu').style.backgroundColor = darkTan;
             document.getElementById('nav-mobile').style.backgroundColor = tan;
             document.getElementById('nav-mobile').style.color = 'white';
+            
         }else{
+            //  About style in light mode
             document.getElementById('about-container__content').style.color = 'grey';
             document.getElementById('about').style.backgroundColor = 'white';
             document.getElementById('about-container__content').style.backgroundColor = '#fff9ef';
@@ -53,6 +58,9 @@ const Icons = props => {
             document.getElementsByClassName('services-card')[1].style.backgroundColor = 'white';
             document.getElementsByClassName('services-card')[2].style.backgroundColor = 'white';
             document.getElementById('services-container__title').style.color = secColor;
+            document.getElementsByClassName('service-title')[0].style.color = secColor;
+            document.getElementsByClassName('service-title')[1].style.color = secColor;
+            document.getElementsByClassName('service-title')[2].style.color = secColor;
 
             // //  Portfolio style in dark mode
             document.getElementById('portfolio').style.backgroundColor = 'white';
@@ -73,7 +81,7 @@ const Icons = props => {
             let modals = document.getElementsByClassName('ant-modal-body');
             if(modals && modals.length >= 1){
                 console.log('got here');
-                modals[0].style.backgroundColor = tan;
+                modals[0].style.backgroundColor = 'tan';
             }   
         }
         

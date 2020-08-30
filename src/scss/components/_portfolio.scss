@@ -27,7 +27,9 @@
         // width: 40%;
         overflow: hidden;
         opacity: 0;
+        border-radius: 20px;
         transform: translateY(-100%);
+        box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.05);
         @include transition-ease; 
 
         &.show-content {
@@ -43,7 +45,7 @@
 
         &:hover img {
             transform: scale(1.2) rotate(2deg);
-            filter: brightness(70%);
+            filter: brightness(20%);
         }
 
         &:hover &__show .title {
@@ -59,7 +61,7 @@
         &:hover &__show{
             // background-color: green;
             transform: translateY(0);
-            border: 3px solid $primary-color;
+            border: 5px solid $primary-color;
         }
 
         img {
@@ -68,6 +70,7 @@
             // max-height: 500px;
             // min-height: 200px;
             position: absolute;
+            // filter: brightness(90%);
             @include transition-ease;
         }
 
@@ -78,6 +81,7 @@
             width: 100%;
             height: 100%;
             border: 0;
+            border-radius: 20px;
             // opacity: 0.4;
             // background-color: grey;
             transform: translateY(-100%);
@@ -145,8 +149,8 @@
         h3 {
             font-size: 20px;
             font-weight: 700;
-            color: $secondary-color;
-            // letter-spacing: 1px;
+            // color: $secondary-color;
+            color: grey;
         }
         
         p .user-type {
@@ -225,11 +229,5 @@
         &__images {
             width: 50%;
         }
-    }
-}
-
-@for $i from 1 through 8 {
-    .portfolio-content.show-content:nth-child(#{$i}) {
-        // transition-delay: ( $i * 0.1s) + 0.15s;
     }
 }

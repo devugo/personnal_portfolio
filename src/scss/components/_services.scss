@@ -28,12 +28,10 @@
                     transition-duration: 1s;
                     opacity: 1;
                     transform: translateX(0);
-                }
 
-                &:hover {
-                    // transition-duration: 0.5s;
-                    // transition-delay: 0s;
-                    // transform: translateY(-10px) !important;
+                    .service-title {
+                        @include transition-ease;
+                    }
                 }
 
                 .image {  
