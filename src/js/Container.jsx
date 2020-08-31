@@ -9,7 +9,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Icons from './components/Icons';
 
-
+// const Services = lazy(() => import('./components/Services'));
 
 const Container = () => {
     const loadedRef = useRef(null);
@@ -72,7 +72,9 @@ const Container = () => {
             <Header ref={loadedRef} open={open} setOpen={setOpen} floatingNav={floatingNav} />
             <Home />
             <About />
-            <Services />
+            {/* <Suspense fallback={<div>Loading...</div>}> */}
+                <Services />
+            {/* </Suspense> */}
             <Portfolio light={light} />
             {/* <Experience /> */}
             <Contact />

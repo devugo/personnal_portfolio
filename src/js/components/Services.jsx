@@ -1,10 +1,8 @@
 import React, { useRef, useEffect, useState } from 'react';
 
 import Card from '../ui-elements/Card';
-import MobileImg from '../../images/mobile.png';
 import WebImg from '../../images/services_images/web_2.svg';
 import MaintenanceImg from '../../images/services_images/maintenance.svg';
-import ServiceMobile from '../../images/services_images/service_mobile.svg';
 import ServiceMobile2 from '../../images/services_images/service_mobile_2.svg';
 
 

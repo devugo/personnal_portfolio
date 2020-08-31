@@ -38,6 +38,7 @@
             @include transition-ease;
 
             &-img {
+                margin-top: 40px;
                 img {
                     width: 60%;
                 }
@@ -135,6 +136,7 @@
 
                 &-img {
                     width: 50%;
+                    margin-top: 0px;
                     // background-color: grey;
                     display: flex;
                     align-items: center;

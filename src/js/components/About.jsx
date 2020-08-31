@@ -10,7 +10,7 @@ const About = () => {
                 <h3 className="about-container__title short-underline section-title" id="about-container__title">ABOUT ME</h3>
                 <div className="about-container__content" id="about-container__content">
                     <div className="about-container__content-img center-content">
-                        <img src={AboutImg2} className="top-in-shake" />
+                        <img src={AboutImg2} className="top-in-shake" alt="My profile"/>
                     </div>
                     <div className="about-container__content-description">
                         <div className="summary">
@@ -41,7 +41,7 @@ const About = () => {
                             <Tag className="tag-me" color="yellow">SQL</Tag>
                         </div>
                         <div className="download">
-                            <a className="btn" target="_blank" href="https://drive.google.com/open?id=1V_V_Pv-xKss9cauOL_vwd3s2femTAXJk">VIEW CV</a>
+                            <a className="btn" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/open?id=1V_V_Pv-xKss9cauOL_vwd3s2femTAXJk">VIEW CV</a>
                         </div>
                     </div>
                 </div>

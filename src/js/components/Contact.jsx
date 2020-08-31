@@ -22,7 +22,7 @@ const Contact = () => {
                         <p>info@devugo.com</p>
                     </div>
                 </a>
-                <a href="https://maps.google.com" target="_blank">
+                <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer">
                     <div className="contact-content__type">
                         <i className="fa fa-map-marker"></i>
                         <p>Lagos, Nigeria</p>

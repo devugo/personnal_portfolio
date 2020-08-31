@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Modal, Tag } from 'antd';
 
 import useWindowWidth from '../helpers/hooks/useWindowWidth';
@@ -38,6 +38,8 @@ import ReactPag2 from '../../images/react_pagination_images/image2.png';
 import ReactPag3 from '../../images/react_pagination_images/image3.png';
 import ReactPag4 from '../../images/react_pagination_images/image4.png';
 import ReactPag5 from '../../images/react_pagination_images/image5.png';
+
+let currSlide = 1;
 
 const Portfolio = props => {
     const width = useWindowWidth();
@@ -80,9 +82,8 @@ const Portfolio = props => {
 
     let { light } = props;
 
-    let currSlide = 1;
 
-    const changeSlide = () => {
+    const changeSlide = useCallback(() => {
         currSlide++;
         let slide = currSlide;
         if(slide > 5){
@@ -91,10 +92,10 @@ const Portfolio = props => {
         }
 
         setActiveSlide(slide);
-    }
+    }, []);
     useEffect(() => {
         setInterval(changeSlide, 5000);
-    }, []);
+    }, [changeSlide]);
 
     return (
         <section className="portfolio" id="portfolio" ref={newRef}>
@@ -228,7 +229,7 @@ const Portfolio = props => {
                             <Tag color="orange">React</Tag>
                         </div><br />
                         <div className="modal-body__content-buttons">
-                            <a href="http://cbt.devugo.com" className="btn" rel="opener" target="_blank"><i className="fa fa-eye"></i> Live Demo</a>
+                            <a href="http://cbt.devugo.com" className="btn" target="_blank" rel="noopener noreferrer"><i className="fa fa-eye"></i> Live Demo</a>
                         </div><br />
                     </div>
                     <div className="modal-body__images">
@@ -286,7 +287,7 @@ const Portfolio = props => {
                             <Tag color="orange">React</Tag>
                         </div><br />
                         <div className="modal-body__content-buttons">
-                            <a href="http://resultsolution.devugo.com/details" rel="opener" target="_blank" className="btn"><i className="fa fa-eye"></i> Live Demo</a>
+                            <a href="http://resultsolution.devugo.com/details" target="_blank" rel="noopener noreferrer" className="btn"><i className="fa fa-eye"></i> Live Demo</a>
                         </div><br />
                     </div>
                     <div className="modal-body__images">
@@ -335,7 +336,7 @@ const Portfolio = props => {
                             <Tag color="orange">Javascript</Tag>
                         </div><br />
                         <div className="modal-body__content-buttons">
-                            <a href="http://fees.devugo.com" rel="opener" target="_blank" className="btn"><i className="fa fa-eye"></i> Live Demo</a>
+                            <a href="http://fees.devugo.com" target="_blank" rel="noopener noreferrer" className="btn"><i className="fa fa-eye"></i> Live Demo</a>
                         </div><br />
                     </div>
                     <div className="modal-body__images">
@@ -387,7 +388,7 @@ const Portfolio = props => {
                             <Tag color="orange">PHP</Tag>
                         </div><br />
                         <div className="modal-body__content-buttons">
-                            <a className="btn" rel="opener" href="http://resultdirect.org" target="_blank"><i className="fa fa-eye"></i>View Live</a>
+                            <a className="btn" rel="opener" href="http://resultdirect.org" target="_blank" rel="noopener noreferrer"><i className="fa fa-eye"></i>View Live</a>
                         </div><br />
                     </div>
                     <div className="modal-body__images">
@@ -431,7 +432,7 @@ const Portfolio = props => {
                             <Tag color="orange">Bootstrap</Tag>
                         </div><br />
                         <div className="modal-body__content-buttons">
-                            <a className="btn" rel="opener" href="https://devugo.com" target="_blank"><i className="fa fa-eye"></i> View Live</a>
+                            <a className="btn" rel="opener" href="https://devugo.com" target="_blank" rel="noopener noreferrer"><i className="fa fa-eye"></i> View Live</a>
                         </div><br />
                     </div>
                     <div className="modal-body__images">
@@ -464,7 +465,7 @@ const Portfolio = props => {
                             <Tag color="orange">CSS</Tag>
                         </div><br />
                         <div className="modal-body__content-buttons">
-                            <a className="btn" rel="opener" target="_blank" href="https://github.com/devugo/reactjs-pagination"><i className="fa fa-code"></i> View Code</a>
+                            <a className="btn" target="_blank" rel="noopener noreferrer" href="https://github.com/devugo/reactjs-pagination"><i className="fa fa-code"></i> View Code</a>
                         </div><br />
                     </div>
                     <div className="modal-body__images">

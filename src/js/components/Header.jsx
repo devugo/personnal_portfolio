@@ -64,10 +64,10 @@ const Header = forwardRef((props, ref) => {
                         </nav>
                     </div>
                     <div className="social-icons" style={{position: 'fixed', bottom: 0, left: 0}}>
-                        <a className={`social-icon ${open && 'open'}`} href="https://twitter.com/devugo1" target="_blank"><i className={`fa fa-twitter-square fa-2x ${open && 'open'}`}></i></a>
-                        <a className={`social-icon ${open && 'open'}`} href="https://www.linkedin.com/in/ugochukwu-ezenwankwo-559a88161/" target="_blank"><i className={`fa fa-linkedin-square fa-2x ${open && 'open'}`}></i></a>
-                        <a className={`social-icon ${open && 'open'}`} href="https://github.com/devugo" target="_blank"><i className={`fa fa-github fa-2x ${open && 'open'}`}></i></a>
-                        <a className={`social-icon ${open && 'open'}`} href="https://web.facebook.com/ugonna.eze.96" target="_blank"><i className={`fa fa-facebook-square fa-2x ${open && 'open'}`}></i></a>
+                        <a className={`social-icon ${open && 'open'}`} href="https://twitter.com/devugo1" target="_blank" rel="noopener noreferrer"><i className={`fa fa-twitter-square fa-2x ${open && 'open'}`}></i></a>
+                        <a className={`social-icon ${open && 'open'}`} href="https://www.linkedin.com/in/ugochukwu-ezenwankwo-559a88161/" target="_blank" rel="noopener noreferrer"><i className={`fa fa-linkedin-square fa-2x ${open && 'open'}`}></i></a>
+                        <a className={`social-icon ${open && 'open'}`} href="https://github.com/devugo" target="_blank" rel="noopener noreferrer"><i className={`fa fa-github fa-2x ${open && 'open'}`}></i></a>
+                        <a className={`social-icon ${open && 'open'}`} href="https://web.facebook.com/ugonna.eze.96" target="_blank" rel="noopener noreferrer"><i className={`fa fa-facebook-square fa-2x ${open && 'open'}`}></i></a>
                         
                     </div>
                 </div>

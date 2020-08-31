@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 let tan = '#161f2e';
 let darkTan = '#0c111a';

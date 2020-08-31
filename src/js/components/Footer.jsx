@@ -14,10 +14,10 @@ const Footer = () => {
             {/* <div></div> */}
             <div className="footer-info">
                 <div className="footer-info-social__icons">
-                    <a href="http://www.twitter.com/devugo1" target="_blank"><i className="fa fa-twitter"></i></a>
-                    <a href="https://www.linkedin.com/in/ugochukwu-ezenwankwo-559a88161/" target="_blank"><i className="fa fa-linkedin"></i></a>
-                    <a href="https://github.com/devugo" target="_blank"><i className="fa fa-github"></i></a>
-                    <a href="https://web.facebook.com/ugonna.eze.96" target="_blank"><i className="fa fa-facebook"></i></a>
+                    <a href="http://www.twitter.com/devugo1" target="_blank" rel="noopener noreferrer"><i className="fa fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/ugochukwu-ezenwankwo-559a88161/" target="_blank" rel="noopener noreferrer"><i className="fa fa-linkedin"></i></a>
+                    <a href="https://github.com/devugo" target="_blank" rel="noopener noreferrer"><i className="fa fa-github"></i></a>
+                    <a href="https://web.facebook.com/ugonna.eze.96" target="_blank" rel="noopener noreferrer"><i className="fa fa-facebook"></i></a>
                 </div>
                 <div className="footer-info__name center-content">
                     <p>Ezenwankwo Ugochukwu &#169; {new Date().getFullYear()}</p>
