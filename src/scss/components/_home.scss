@@ -237,7 +237,7 @@
                     border-radius: 50%;
                     z-index: 2;
                     opacity: 0;
-                    transform: translateX(20vw);
+                    // transform: translateX(20vw);
 
                     -webkit-animation-name: blink_one; /* Chrome, Safari, Opera */
                     -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
@@ -260,7 +260,6 @@
                     border-radius: 50%;
                     z-index: 2;
                     opacity: 0;
-                    transform: translateX(20vw);
 
                     -webkit-animation-name: blink_two; /* Chrome, Safari, Opera */
                     -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */

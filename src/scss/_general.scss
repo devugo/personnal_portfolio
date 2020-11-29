@@ -137,5 +137,6 @@ a.current {
 }
 
 body {
+    overflow-x: hidden;
     @include transition-ease;
 }
