@@ -95,11 +95,11 @@ const Home = props => {
             }
         }
         
-    }, []);
+    });
 
     return (
         <section className="home" id="home" ref={homeRef}>
-            <div className="home-column">
+            <div className="home-column wrapper">
                 <div className={`home-column__about${slideIn ? ' enter_from_left' : ''}`}>
                     <div className="home-column__about-hello">
                         <div className="hello">Hello!!</div>
@@ -107,7 +107,8 @@ const Home = props => {
                     <h4>Ezenwankwo Ugochukwu</h4>
                     <p className="skill">I'm a <span>{currentSkill}</span></p>
                     <p className="bio"> Problem solving, responsive designs, robust APIs and scalabale softwares, testing and maintenace of applications.</p>
-                    <a target="_blank" rel="noopener noreferrer" href="https://www.upwork.com/freelancers/~011c8bdfb541a568e5?viewMode=1" className="btn">GET IN TOUCH</a>
+                    {/* <a target="_blank" rel="noopener noreferrer" href="https://www.upwork.com/freelancers/~011c8bdfb541a568e5?viewMode=1" className="btn">GET IN TOUCH</a> */}
+                    <a target="_blank" rel="noopener noreferrer" href="mailto: info@devugo.com" className="btn">GET IN TOUCH</a>
                 </div>
                 <div className="home-column__profile">
                     <div className="home-column__profile-image">

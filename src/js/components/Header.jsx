@@ -3,14 +3,14 @@ import React, { forwardRef } from 'react';
 import ProfileAvatar from '../../images/profile_avatar.png';
 
 const Header = forwardRef((props, ref) => {
-
+    // console.log(ref);
    let { open, setOpen, floatingNav } = props;
 
     return (
         <header ref={ref}>
             <div className={`navbar ${floatingNav}`}>
                 <div className={`navbar-title ${floatingNav} center-content hide-desktop`}>Devugo</div>
-                <img className="show-desktop" src={ProfileAvatar} alt="devugo" />
+                <img className="navbar-avatar show-desktop" src={ProfileAvatar} alt="devugo" />
                 {/* Desktop Nav */}
                 <nav className="show-desktop">
                     <ul>
@@ -25,6 +25,9 @@ const Header = forwardRef((props, ref) => {
                         </li>
                         <li>
                             <a className="link_tag" href="#portfolio">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="https://blog.devugo.com" target="_blank" rel="noreferrer">Blog</a>
                         </li>
                         <li>
                             <a className="link_tag" href="#contact">Contact</a>
@@ -56,6 +59,9 @@ const Header = forwardRef((props, ref) => {
                                 </li>
                                 <li className={`nav-mobile ${open && 'open'}`}>
                                     <a className="link_tag" href="#portfolio">Portfolio</a>
+                                </li>
+                                <li className={`nav-mobile ${open && 'open'}`}>
+                                    <a href="https://blog.devugo.com" target="_blank" rel="noreferrer">Blog</a>
                                 </li>
                                 <li className={`nav-mobile ${open && 'open'}`}>
                                     <a className="link_tag" href="#contact">Contact</a>

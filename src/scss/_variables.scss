@@ -1,0 +1,117 @@
+$primary-color: #ffb32f;
+$secondary-color: rgb(33, 3, 109);
+$green: green;
+$whiteOne: #f2f2f2;
+
+//  LIGHT THEME
+html {
+    --primaryColor: #ffb32f;
+    --primaryColor2: #fff9ef;
+    --secondaryColor: rgb(33, 3, 109);
+    --secondaryColor2: #f0eefd;
+
+    --textColor1: #f2f2f2;
+    --textColor2: #f3f3f3;
+    --textColor3: #fff;
+    --textColor4: rgb(48, 53, 48);
+    --textColor5: rgba(0, 0, 0, 0.65);
+
+    --green: green;
+    --darkGray: darkgray;
+    --lightGray: rgb(128,128,128);
+    --gray: grey;
+    --veryDarkGray: rgb(48, 53, 48);
+    --black: black;
+
+    --bgColor1: #fff;
+    --bgColor2: var(--primaryColor2);
+
+    --homeBg: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../images/home-bg.jpg") no-repeat center center fixed;
+
+    --headerFloatingBgColor: var(--veryDarkGray);
+    --headerFooterBgColor: var(--veryDarkGray);
+    --headerProfileInfoBgColor: var(--secondaryColor);
+    --headerNavMiddleBgColor: var(--textColor3);
+    --headerNavMiddleColor: var(--textColor5);
+    --navbarAvatarFilter: brightness(100%);
+
+    --sectionTitle: --secondaryColor;
+    --sectionTitleUnderlineColor: var(--primaryColor);
+
+    --aboutSummaryColor: var(--textColor4);
+
+    --servicesBgColor: var(--secondaryColor2);
+    --servicesBriefColor: var(--textColor4);
+    --servicesCardBgColor: var(--bgColor1);
+    --servicesCardTitleColor: var(--secondaryColor);
+    --servicesCardParagraphColor: var(--textColor5);
+
+    --portfolioBgColor: var(--bgColor1);
+    --portfolioBriefColor: var(--textColor4);
+    --portfolioImageFilter: brightness(100%);
+    --portfolioModalImageFilter: brightness(100%);
+    --portfolioModalBgColor: var(--bgColor1);
+    --portfolioModalCloseBtnColor: var(--veryDarkGray);
+    --portfolioModalTitleColor: var(--textColor4);
+    --portfolioModalTextColor: var(--textColor5);
+
+    --contactTitleColor: var(--secondaryColor);
+    --contactBriefColor: var(--textColor4);
+
+    --footerTopBgColor: var(--veryDarkGray);
+    --footerBottomBgColor: rgb(22, 21, 21);
+}
+
+//  DARK THEME
+html[data-theme='dark'] {
+    --primaryColor2: rgb(21, 32, 43);
+    --secondaryColor: rgb(33, 3, 109);
+    
+    --green: green;
+    --darkGray: darkgray;
+    --lightGray: rgb(128,128,128);
+    --gray: grey;
+    --veryDarkGray: rgb(48, 53, 48);
+
+    --bgColor1: rgb(21, 32, 43);
+    --bgColor2: rgb(25, 39, 52);
+    
+    --homeBg: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url("../images/home-bg.jpg") no-repeat center center fixed;
+
+    --headerFloatingBgColor: var(--bgColor2);
+    --headerFooterBgColor: var(--bgColor2);
+    --headerProfileInfoBgColor: var(--bgColor2);
+    --headerNavMiddleBgColor: var(--bgColor1);
+    --headerNavMiddleColor: var(--textColor2);
+    --navbarAvatarFilter: brightness(70%);
+
+    --sectionTitle: var(--primaryColor);
+    --sectionTitleUnderlineColor: var(--textColor3);
+
+    --aboutSummaryColor: var(--textColor1);
+    
+    --servicesBgColor: var(--bgColor2);
+    --servicesBriefColor: var(--textColor2);
+    --servicesCardBgColor: var(--bgColor1);
+    --servicesCardTitleColor: var(--textColor2);
+    --servicesCardParagraphColor: var(--darkGray);
+    
+    --portfolioBgColor: var(--bgColor1);
+    --portfolioBriefColor: var(--textColor2);
+    --portfolioImageFilter: brightness(70%);
+    --portfolioModalImageFilter: brightness(70%);
+    --portfolioModalBgColor: var(--bgColor2);
+    --portfolioModalCloseBtnColor: var(--lightGray);
+    --portfolioModalTitleColor: var(--textColor1);
+    --portfolioModalTextColor: var(--darkGray);
+
+    --contactTitleColor: var(--primaryColor);
+    --contactBriefColor: var(--textColor2);
+    
+    --footerTopBgColor: var(--bgColor1);
+    --footerBottomBgColor: var(--bgColor2);
+}
+
+body {
+    background: var(--bgColor1) !important;
+}

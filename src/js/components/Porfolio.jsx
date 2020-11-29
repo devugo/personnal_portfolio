@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Modal, Tag } from 'antd';
 
 import useWindowWidth from '../helpers/hooks/useWindowWidth';
+import { PortfolioItem } from '../ui-elements/PortfolioItem';
 
 import CBT1 from '../../images/cbt_images/image1.png';
 import CBT2 from '../../images/cbt_images/image2.png';
@@ -80,8 +81,6 @@ const Portfolio = props => {
         }
     })
 
-    let { light } = props;
-
 
     const changeSlide = useCallback(() => {
         currSlide++;
@@ -99,84 +98,67 @@ const Portfolio = props => {
 
     return (
         <section className="portfolio" id="portfolio" ref={newRef}>
-            <h3 className="section-title short-underline" id="portfolio-title">PORTFOLIO</h3>
-            <div className="portfolio__do center-content">
-                <p id="portfolio-sub__title">Some of the works done in the past are as follows;</p>
-            </div>
-            <div className="portfolio-desktop__body">
-                <div className="portfolio-body">
-                    <div className={`portfolio-content${firstIn ? ' show-content' : ''}`}>
-                        <img src={CBT2} alt="project" />
-                        <div className="portfolio-content__show center-content">
-                            <div className="title">
-                                <h5>WEB BASED CBT APP</h5>
-                                <p>Symfony / React / Redux</p>
-                            </div>
-                            <div className="button">
-                                <button onClick={() => setVisibleOne(true)}>LEARN MORE</button>
-                            </div>
-                        </div>
-                    </div><br />
-                    <div className={`portfolio-content${firstIn ? ' show-content' : ''}`}>
-                        <img src={Result2} alt="result_project" />
-                        <div className="portfolio-content__show center-content">
-                            <div className="title">
-                                <h5>SCHOOL RESULT SOLUTION</h5>
-                                <p>Symfony / React</p>
-                            </div>
-                            <div className="button">
-                                <button onClick={() => setVisibleTwo(true)}>LEARN MORE</button>
-                            </div>
-                        </div>
-                    </div><br />
-                    <div className={`portfolio-content${firstIn ? ' show-content' : ''}`}>
-                        <img src={Fee1} alt="fees_project" />
-                        <div className="portfolio-content__show center-content">
-                            <div className="title">
-                                <h5>FEES MANAGEMENT SYSTEM</h5>
-                                <p>PHP MVC / Javascript</p>
-                            </div>
-                            <div className="button">
-                                <button onClick={() => setVisibleThree(true)}>LEARN MORE</button>
-                            </div>
-                        </div>
-                    </div><br />
-                    <div className={`portfolio-content${firstIn ? ' show-content' : ''}`}>
-                        <img src={ResultDirect1} alt="project" />
-                        <div className="portfolio-content__show center-content">
-                            <div className="title">
+            <div className="portfolio-container wrapper">
+                <h3 className="section-title short-underline" id="portfolio-title">PORTFOLIO</h3>
+                <div className="portfolio-container__do center-content">
+                    <p id="portfolio-sub__title">Some of the works done in the past are as follows;</p>
+                </div>
+                <div className="portfolio-container-desktop__body">
+                    <div className="portfolio-container-body">
+                        <PortfolioItem
+                            Image={CBT2}
+                            action={setVisibleOne}
+                            className={firstIn ? ' show-content' : ''}
+                        >
+                            <h5>WEB BASED CBT APP</h5>
+                            <p>Symfony / React / Redux</p>
+                        </PortfolioItem>
+
+                        <PortfolioItem
+                            Image={Result2}
+                            action={setVisibleTwo}
+                            className={firstIn ? ' show-content' : ''}
+                        >
+                            <h5>SCHOOL RESULT SOLUTION</h5>
+                            <p>Symfony / React</p>
+                        </PortfolioItem>
+                        
+                        <PortfolioItem
+                            Image={Fee1}
+                            action={setVisibleThree}
+                            className={firstIn ? ' show-content' : ''}
+                        >
+                            <h5>FEES MANAGEMENT SYSTEM</h5>
+                            <p>PHP MVC / Javascript</p>
+                        </PortfolioItem>
+
+                        <PortfolioItem
+                            Image={ResultDirect1}
+                            action={setVisibleFour}
+                            className={firstIn ? ' show-content' : ''}
+                        >
                             <h5>RESULT DIRECT</h5>
-                                <p>HTML / CSS / Javascript</p>
-                            </div>
-                            <div className="button">
-                                <button onClick={() => setVisibleFour(true)}>LEARN MORE</button>
-                            </div>
-                        </div>
-                    </div><br />
-                    <div className={`portfolio-content${firstIn ? ' show-content' : ''}`}>
-                        <img src={Landing1} alt="project" />
-                        <div className="portfolio-content__show center-content">
-                            <div className="title">
+                            <p>HTML / CSS / Javascript</p>
+                        </PortfolioItem>
+
+                        <PortfolioItem
+                            Image={Landing1}
+                            action={setVisibleFive}
+                            className={firstIn ? ' show-content' : ''}
+                        >
                             <h5>LANDING PAGE</h5>
-                                <p>HTML / CSS / Javascript</p>
-                            </div>
-                            <div className="button">
-                                <button onClick={() => setVisibleFive(true)}>LEARN MORE</button>
-                            </div>
-                        </div>
-                    </div><br />
-                    <div className={`portfolio-content${firstIn ? ' show-content' : ''}`}>
-                        <img src={ReactPag1} alt="project" />
-                        <div className="portfolio-content__show center-content">
-                            <div className="title">
+                            <p>HTML / CSS / Javascript</p>
+                        </PortfolioItem>
+
+                        <PortfolioItem
+                            Image={ReactPag1}
+                            action={setVisibleSix}
+                            className={firstIn ? ' show-content' : ''}
+                        >
                             <h5>REACT JS PAGINATION</h5>
-                                <p>React</p>
-                            </div>
-                            <div className="button">
-                                <button onClick={() => setVisibleSix(true)}>LEARN MORE</button>
-                            </div>
-                        </div>
-                    </div><br />
+                            <p>React</p>
+                        </PortfolioItem>
+                    </div>
                 </div>
             </div>
             <Modal
@@ -185,7 +167,7 @@ const Portfolio = props => {
                 centered={true}
                 footer={null}
                 width={width > 1024 ? '80%' : width > 767 ? '90%' : width > 360 ? '95%' : '100%'}
-                bodyStyle={{ backgroundColor: !light ? '#161f2e' : 'white', color: !light ? 'white' : 'grey'}}
+                // bodyStyle={{ backgroundColor: !light ? '#161f2e' : 'white', color: !light ? 'white' : 'grey'}}
             >
                 <div className="modal-body">
                     <div className="modal-body__content">
@@ -210,17 +192,17 @@ const Portfolio = props => {
                             <span className="user-type">Multiple options - Multiple answers</span>, <span className="user-type">Short answers</span>, 
                             <span className="user-type">Long answer</span>, <span className="user-type">Order Items</span> and <span className="user-type">Match items</span>
                         </p>
-                        <p>
+                        <div>
                             CBT app also support three kinds of exam types; 
                             <ul>
                                 <li>Take anytime i.e. exams that can be taken any point in time</li>
                                 <li>Take within a time frame i.e. exam that can only be taken within a period of time</li>
                                 <li>Take real time i.e. exams that can the taken on a scheduled time only</li>
                             </ul>
-                        </p>
+                        </div>
                         <p>
                             Exams are taken within a time frame and once the time exceeds, exam is submitted and a result generated showing different information about the exam like;
-                             time spent in exam, no of questions answered and unanswered, questions passed and failed, exam score, questions review etc.
+                            time spent in exam, no of questions answered and unanswered, questions passed and failed, exam score, questions review etc.
                         </p>
                         <div className="modal-body__content-stacks">
                             <Tag color="orange">HTML</Tag>
@@ -248,7 +230,7 @@ const Portfolio = props => {
                 centered={true}
                 footer={null}
                 width={width > 1024 ? '80%' : width > 767 ? '90%' : width > 360 ? '95%' : '100%'}
-                bodyStyle={{ backgroundColor: !light ? '#161f2e' : 'white', color: !light ? 'white' : 'grey'}}
+                // bodyStyle={{ backgroundColor: !light ? '#161f2e' : 'white', color: !light ? 'white' : 'grey'}}
             >
                 <div className="modal-body">
                     <div className="modal-body__content">
@@ -306,7 +288,7 @@ const Portfolio = props => {
                 centered={true}
                 footer={null}
                 width={width > 1024 ? '80%' : width > 767 ? '90%' : width > 360 ? '95%' : '100%'}
-                bodyStyle={{ backgroundColor: !light ? '#161f2e' : 'white', color: !light ? 'white' : 'grey'}}
+                // bodyStyle={{ backgroundColor: !light ? '#161f2e' : 'white', color: !light ? 'white' : 'grey'}}
             >
                 <div className="modal-body">
                     <div className="modal-body__content">
@@ -356,7 +338,7 @@ const Portfolio = props => {
                 footer={null}
                 width={width > 1024 ? '80%' : width > 767 ? '90%' : width > 360 ? '95%' : '100%'}
                 className="devugo-sample-modal"
-                bodyStyle={{ backgroundColor: !light ? '#161f2e' : 'white', color: !light ? 'white' : 'grey'}}
+                // bodyStyle={{ backgroundColor: !light ? '#161f2e' : 'white', color: !light ? 'white' : 'grey'}}
             >
                 <div className="modal-body">
                     <div className="modal-body__content">
@@ -407,13 +389,13 @@ const Portfolio = props => {
                 centered={true}
                 footer={null}
                 width={width > 1024 ? '80%' : width > 767 ? '90%' : width > 360 ? '95%' : '100%'}
-                bodyStyle={{ backgroundColor: !light ? '#161f2e' : 'white', color: !light ? 'white' : 'grey'}}
+                // bodyStyle={{ backgroundColor: !light ? '#161f2e' : 'white', color: !light ? 'white' : 'grey'}}
             >
                 <div className="modal-body">
                     <div className="modal-body__content">
                         <h3 className="portfolio-modal-title">LANDING PAGE</h3>
                         <p>
-                           A single landing page designed that shows information about a firm and its products.
+                        A single landing page designed that shows information about a firm and its products.
                         </p>
                         <p>
                             Features of this application are as follows; 
@@ -451,7 +433,7 @@ const Portfolio = props => {
                 centered={true}
                 footer={null}
                 width={width > 1024 ? '80%' : width > 767 ? '90%' : width > 360 ? '95%' : '100%'}
-                bodyStyle={{ backgroundColor: !light ? '#161f2e' : 'white', color: !light ? 'white' : 'grey'}}
+                // bodyStyle={{ backgroundColor: !light ? '#161f2e' : 'white', color: !light ? 'white' : 'grey'}}
             >
                 <div className="modal-body">
                     <div className="modal-body__content">

@@ -13,17 +13,18 @@ header {
         @include transition-ease;
 
         &.floatingNav {
-            background-color: rgb(48, 53, 48);
+            background-color: var(--headerFloatingBgColor);
             border-radius: 2px;
             box-shadow: 0px 1px 10px rgb(44, 44, 44);
+            @include transition-ease;
         }
 
         &-title {
             padding-top: 6px;
             width: 20%;;
             height: 35px;
-            border: 1px solid $primary-color;
-            color: white;
+            border: 1px solid var(--primaryColor);
+            color: var(--textColor3);
             position: absolute;
             top: 23%;
             left: 10%;
@@ -32,9 +33,15 @@ header {
 
             &.floatingNav {
                 border: none;
-                background-color: $primary-color;
+                background-color: var(--primaryColor);
             }
         }
+
+        &-avatar {
+            @include transition-ease;
+            filter: var(--navbarAvatarFilter)
+        }
+
         .show-desktop {
             display: none;
         }
@@ -81,7 +88,7 @@ header {
             position: absolute;
             height: 5px;
             width: 20px;
-            background-color: #f3f3f3;
+            background-color: var(--textColor2);
             top: 0;
             left: 0;
             @include transition-ease;
@@ -107,7 +114,7 @@ header {
                 width: 25px;
                 top: 0.5rem;
                 left: 0;
-                background-color: grey;
+                background-color: var(--gray);
                 @include transition-ease;
             }
 
@@ -118,7 +125,7 @@ header {
                 width: 25px;
                 top: 1rem;
                 left: 0;
-                background-color: grey;
+                background-color: var(--gray);
                 @include transition-ease;
             }
         }
@@ -131,7 +138,7 @@ header {
         transform: translateY(-100%);
         height: 100vh;
         width: 100%;
-        background-color: white;
+        background-color: var(--textColor3);
         opacity: 0.97;
         display: flex;
         flex-direction: column;
@@ -153,17 +160,18 @@ header {
                 width: 100%;
                 overflow-y: scroll;
                 height: 100%;
+                background-color: var(--headerProfileInfoBgColor);
  
                 .profile-info {
                     width: 100%;
                     justify-content: space-around;
                     text-align: center;
                     // overflow-y: scroll;
-                    color: white;
+                    color: var(--textColor3);
                     padding-bottom: 40px;
                     padding-top: 80px;
-                    background-color: $secondary-color;
                     @include transition-ease;
+                    // transform: skewY(100deg);
                     transform: translateY(-100vh);
                     transition-delay: 0.5s;
 
@@ -179,10 +187,10 @@ header {
 
                     h5{
                         font-size: 1.4rem;
-                        color: white;
+                        color: var(--textColor3);;
                     }
                     p {
-                        color: #f3f3f3;
+                        color: var(--textColor2);
                         margin-top: -15px;
 
                     }
@@ -195,15 +203,15 @@ header {
                     z-index: 4;
                     margin-top: -1.2rem;
                     padding-bottom: 50px;
-                    overflow-y: scroll;
+                    overflow-y: auto;
+                    background-color: var(--headerNavMiddleBgColor);
                     @include transition-ease;
                     ul {
                         list-style: none;
                         display: flex;
                         flex-direction: column;
                         align-items: center;
-                        justify-content: space-around;
-                        // background-color: red;
+                        justify-content: center;
                         height: 100%;
                         font-size: 1.4em;
                         transform: skewY(-3deg);
@@ -213,7 +221,7 @@ header {
                         li {
                             @include transition-ease;
                             transform: translateX(100vw);
-                            margin-top: 30px;
+                            margin-top: 15px;
 
                             &.open {
                                 transform: translateX(0);
@@ -221,7 +229,8 @@ header {
                             a{
                                 @include transition-ease;
                                 color: inherit;
-                                font-size: 25px;
+                                font-size: 13px;
+                                color: var(--headerNavMiddleColor);
                             }
                         }
                     }
@@ -229,7 +238,7 @@ header {
             }
 
             .social-icons {
-                background-color: rgb(48, 53, 48);
+                background-color: var(--headerFooterBgColor);
                 width: 100%;
                 height: 80px;
                 display: flex;
@@ -238,6 +247,7 @@ header {
                 align-items: center;
                 z-index: 4;
                 overflow: hidden;
+                @include transition-ease;
 
                 .social-icon {
                     @include transition-ease;
@@ -250,10 +260,10 @@ header {
                 }
 
                 i {
-                    color: grey;
+                    color: var(--gray);
 
                     &:hover {
-                        color: #f3f3f3;
+                        color: var(--textColor2);
                     }
                 }
             }
@@ -271,6 +281,10 @@ header {
             display: flex;
             justify-content: space-between;
             width: 100%; 
+            // background-color: red;
+            // margin: 0 auto;
+            // width: 100vw !important;
+            // margin-left: 100px;
 
             img {
                 width: 40px;
@@ -298,15 +312,15 @@ header {
                         @include transition-ease;
 
                         a {
-                            color: #f3f3f3;
+                            color: var(--textColor2);
                             @include transition-ease;
 
                             &:hover {
-                                color: $primary-color;
+                                color: var(--primaryColor);
                                 font-weight: 800;
                             }
                             &:active {
-                                color: $primary-color;
+                                color: var(--primaryColor);
                                 font-weight: 800;
                             }
                         }

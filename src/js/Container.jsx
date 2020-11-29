@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+// import LazyLoad from 'react-lazyload';
 
 import Header from './components/Header';
 import Home from './components/Home';
@@ -16,9 +17,6 @@ const Container = () => {
 
     const [open, setOpen] = useState(false);
     const [floatingNav, setFloatingNav] = useState('');
-
-    // light or dark mode
-    const [light, setLight] = useState(true);
 
     // Floating NAV; Adding shadow to the bottom nav on scroll down
     useEffect(() => {
@@ -48,19 +46,23 @@ const Container = () => {
 
                 mainNavs.forEach(link => {
                     let section = document.querySelector(link.hash);
+                    // console.log(section)
 
                     let ctrl = 0;
                     
                     //  Note i introduced r=the values 70 and 124 to counter the skewed  background on the web page
                     
-                    if(
-                        section.offsetTop - ctrl <= fromTop + 70 &&
-                        section.offsetTop + section.offsetHeight > fromTop + 124
-                    ) {
-                        link.classList.add("current");
-                    }else{
-                        link.classList.remove("current");
+                    if(section){
+                        if(
+                            section.offsetTop - ctrl <= fromTop + 70 &&
+                            section.offsetTop + section.offsetHeight > fromTop + 124
+                        ) {
+                            link.classList.add("current");
+                        }else{
+                            link.classList.remove("current");
+                        }
                     }
+                   
                 });
             });
         }
@@ -73,16 +75,15 @@ const Container = () => {
             <Home />
             <About />
             {/* <Suspense fallback={<div>Loading...</div>}> */}
-                <Services />
+                {/* <LazyLoad placeholder={<div>Loading...</div>}> */}
+                    <Services />
+                {/* </LazyLoad> */}
             {/* </Suspense> */}
-            <Portfolio light={light} />
+            <Portfolio />
             {/* <Experience /> */}
             <Contact />
             <Footer />
-            <Icons 
-                light={light}
-                setLight={setLight}
-            />
+            <Icons />
         </>
     )
 }

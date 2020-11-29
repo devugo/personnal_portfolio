@@ -6,7 +6,7 @@ import AboutImg2 from '../../images/about.svg';
 const About = () => {
     return (
         <section className="about" id="about">
-            <div className="about-container">
+            <div className="about-container wrapper">
                 <h3 className="about-container__title short-underline section-title" id="about-container__title">ABOUT ME</h3>
                 <div className="about-container__content" id="about-container__content">
                     <div className="about-container__content-img center-content">
@@ -41,7 +41,7 @@ const About = () => {
                             <Tag className="tag-me" color="yellow">SQL</Tag>
                         </div>
                         <div className="download">
-                            <a className="btn" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/open?id=1V_V_Pv-xKss9cauOL_vwd3s2femTAXJk">VIEW CV</a>
+                            <a className="btn" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1vMHHTqo0BCbs6_om1-olSorcDqwq1dkL/view?usp=sharing">VIEW CV</a>
                         </div>
                     </div>
                 </div>

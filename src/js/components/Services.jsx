@@ -16,11 +16,8 @@ const Services = () => {
             let fromTop = window.scrollY;
 
             if(newRef){
-                // console.log(newRef.current.offsetTop);
-                // console.log(window.innerHeight);
                 if(newRef.current.offsetTop - window.innerHeight <= fromTop){
                     setFirstIn(true);
-                    // document.getElementById('about').classList.add('slide-in');
                 }else{
                     setFirstIn(false);
                 }
@@ -37,7 +34,7 @@ const Services = () => {
 
     return (
         <section ref={newRef} className="services" id="services">
-            <div className="services-container">
+            <div className="services-container wrapper">
                 <h3 className="services-container__title short-underline section-title" id="services-container__title">SERVICES</h3>
                 <div className="services-container__do center-content">
                     <p id="what-i-do">What i do...</p>
@@ -55,18 +52,6 @@ const Services = () => {
                                 fully responsive on all devices and platforms. Got a great idea of a 
                                 project, say hello to me, lets bring your idea to reality.
                             </p>
-                            {/* <p>
-                                Web development services encompasses the folloeing;
-                            </p> */}
-                            {/* <ul>
-                                <li>Corporate website design</li>
-                                <li>Product Landing page design</li>
-                                <li>Personnal portfolio website</li>
-                                <li>Custom web development</li>
-                                <li>Blog development</li>
-                                <li>Education solution</li>
-                                <li>Management Systems</li>
-                            </ul> */}
                         </Card>
                         <Card className={`services-card${firstIn ? ' show-content' : ''}`} id="services-card">
                             <div className="image center-content">

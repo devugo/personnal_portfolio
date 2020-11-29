@@ -7,11 +7,10 @@ const Footer = () => {
                 <span className="icon-one"></span>
                 <span className="icon-two"></span>
             </div></a>
-            <div className="footer-curve">
+            {/* <div className="footer-curve">
                 <div className="footer-curve__right"></div>
                 <div className="footer-curve__left"></div>
-            </div>
-            {/* <div></div> */}
+            </div> */}
             <div className="footer-info">
                 <div className="footer-info-social__icons">
                     <a href="http://www.twitter.com/devugo1" target="_blank" rel="noopener noreferrer"><i className="fa fa-twitter"></i></a>

@@ -1,28 +1,27 @@
 .services {
-    margin-top: -5%;
-    padding: 1.2rem;
-    padding-top: 60px;
-    margin-bottom: 10%;
-    background-color: #f0eefd;
+    background-color: var(--servicesBgColor);
     @include transition-ease;
 
     &-container {
         overflow: hidden;
+        margin: 0 auto;
 
         &__do {
-            margin: 45px 0;
             font-size: 20px;
+            color: var(--servicesBriefColor);
+            margin-top: 40px;
+            @include transition-ease;
         }
 
         &__content {
             @include transition-ease;
             
             .services-card {
-                background-color: white;
-                margin-bottom: 30px;
+                background-color: var(--servicesCardBgColor);
                 opacity: 0;
                 transform: translateX(-100vw);
-                @include transition-ease;
+                margin-bottom: 15px;
+                // @include transition-ease;
 
                 &.show-content {
                     transition-duration: 1s;
@@ -30,7 +29,13 @@
                     transform: translateX(0);
 
                     .service-title {
+                        color: var(--servicesCardTitleColor);
                         @include transition-ease;
+                    }
+
+                    p {
+                        @include transition-ease;
+                        color: var(--servicesCardParagraphColor)
                     }
                 }
 
@@ -43,7 +48,7 @@
                 }
 
                 h5 {
-                    color: $secondary-color;
+                    color: var(--secondaryColor);
                     font-size: 19px;
                 }
 
@@ -57,11 +62,9 @@
 
 @include media-md {
     .services {
-        padding-top: 80px;
         &-container {
 
             &__title {
-                margin-left: 9%;
                 font-size: 25px;
             }
 
@@ -73,20 +76,13 @@
             &__content {
                 display: flex;
                 flex-direction: row;
-                justify-content: space-around;
-                width: 85%;
+                justify-content: space-between;
 
                 .services-card {
                     width: 30%;
                 }
             }
         }
-    }
-}
-
-@include media-lg {
-    .services {
-        padding-top: 100px;
     }
 }
 
