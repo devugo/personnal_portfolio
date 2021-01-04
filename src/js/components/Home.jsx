@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback, useRef } from 'react';
 
 import ProfileImage from '../../images/profile_picture.jpeg';
 
-const skills = ['SOFTWARE DEVELOPER.', 'JAVASCRIPT DEVELOPER.', 'REACT DEVELOPER.', 'PHP DEVELOPER.', 'LARAVEL DEVELOPER.', 'SYMFONY DEVELOPER.'];
+const skills = ['SOFTWARE DEVELOPER.', 'JAVASCRIPT DEVELOPER.', 'PHP DEVELOPER.'];
 
 
 const Home = props => {

@@ -10,7 +10,7 @@ const Icon = ({ toggle, light }) => {
 
 const Icons = props => {
     // light or dark mode
-    const [light, setLight] = useState(false);
+    const [light, setLight] = useState(true);
 
     const toggleTheme = useCallback(() => {
         //  Toggle theme
