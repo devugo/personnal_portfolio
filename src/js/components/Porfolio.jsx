@@ -10,23 +10,11 @@ import CBT3 from '../../images/cbt_images/image3.png';
 import CBT4 from '../../images/cbt_images/image4.png';
 import CBT5 from '../../images/cbt_images/image5.png';
 
-import Result1 from '../../images/result_images/image1.png';
-import Result2 from '../../images/result_images/image2.png';
-import Result3 from '../../images/result_images/image3.png';
-import Result4 from '../../images/result_images/image4.png';
-import Result5 from '../../images/result_images/image5.png';
-
 import Fee1 from '../../images/fees_images/image1.png';
 import Fee2 from '../../images/fees_images/image2.png';
 import Fee3 from '../../images/fees_images/image3.png';
 import Fee4 from '../../images/fees_images/image4.png';
 import Fee5 from '../../images/fees_images/image5.png';
-
-import Landing1 from '../../images/landing_page_images/image1.png';
-import Landing2 from '../../images/landing_page_images/image2.png';
-import Landing3 from '../../images/landing_page_images/image3.png';
-import Landing4 from '../../images/landing_page_images/image4.png';
-import Landing5 from '../../images/landing_page_images/image5.png';
 
 import ResultDirect1 from '../../images/result_direct_images/image1.png';
 import ResultDirect2 from '../../images/result_direct_images/image2.png';
@@ -34,11 +22,18 @@ import ResultDirect3 from '../../images/result_direct_images/image3.png';
 import ResultDirect4 from '../../images/result_direct_images/image4.png';
 import ResultDirect5 from '../../images/result_direct_images/image5.png';
 
-import ReactPag1 from '../../images/react_pagination_images/image1.png';
-import ReactPag2 from '../../images/react_pagination_images/image2.png';
-import ReactPag3 from '../../images/react_pagination_images/image3.png';
-import ReactPag4 from '../../images/react_pagination_images/image4.png';
-import ReactPag5 from '../../images/react_pagination_images/image5.png';
+import Sale1 from '../../images/sales_comission_management/image1.jpg';
+import Sale2 from '../../images/sales_comission_management/image2.jpg';
+import Sale3 from '../../images/sales_comission_management/image3.jpg';
+
+
+import GithubPage from '../../images/github_images/github.jpg';
+
+// Websites images
+import CreoImage from '../../images/websites/creo.jpg';
+import ArtistImage from '../../images/websites/artist-portfolio.jpg';
+import DesignerImage from '../../images/websites/design-portfolio.jpg';
+import OneBurnerImage from '../../images/websites/oneburner.jpg';
 
 let currSlide = 1;
 
@@ -50,8 +45,9 @@ const Portfolio = props => {
     const [visibleThree, setVisibleThree] = useState(false);
     const [visibleFour, setVisibleFour] = useState(false);
     const [visibleFive, setVisibleFive] = useState(false);
-    const [visibleSix, setVisibleSix] = useState(false);
     const [activeSlide, setActiveSlide] = useState(1);
+
+    const [portfolioState, setPortfolioState] = useState('apps');
 
     let newRef = useRef(null);
 
@@ -104,60 +100,107 @@ const Portfolio = props => {
                     <p id="portfolio-sub__title">Some of the works done in the past are as follows;</p>
                 </div>
                 <div className="portfolio-container-desktop__body">
+                    <div className="buttons">
+                        <button className={`btn${portfolioState === 'apps' ? ' active' : ''}`} onClick={() => setPortfolioState('apps')}>Apps</button>
+                        <button className={`btn${portfolioState === 'websites' ? ' active' : ''}`} onClick={() => setPortfolioState('websites')} >Websites</button>
+                    </div>
                     <div className="portfolio-container-body">
-                        <PortfolioItem
-                            Image={CBT2}
-                            action={setVisibleOne}
-                            className={firstIn ? ' show-content' : ''}
-                        >
-                            <h5>WEB BASED CBT APP</h5>
-                            <p>Symfony / React / Redux</p>
-                        </PortfolioItem>
+                        {
+                            portfolioState === 'apps' ?
+                            <>
+                                <PortfolioItem
+                                    Image={CBT2}
+                                    action={setVisibleOne}
+                                    className={firstIn ? ' show-content' : ''}
+                                >
+                                    <h5>WEB BASED CBT APP</h5>
+                                    <p>Symfony / React / Redux</p>
+                                </PortfolioItem>
+        
+                                <PortfolioItem
+                                    Image={Sale1}
+                                    action={setVisibleTwo}
+                                    className={firstIn ? ' show-content' : ''}
+                                >
+                                    <h5>SALES COMISSION MANAGEMENT SYSTEM</h5>
+                                    <p>Laravel / Javascript</p>
+                                </PortfolioItem>
+                                
+                                <PortfolioItem
+                                    Image={Fee1}
+                                    action={setVisibleThree}
+                                    className={firstIn ? ' show-content' : ''}
+                                >
+                                    <h5>FEES MANAGEMENT SYSTEM</h5>
+                                    <p>PHP MVC / Javascript</p>
+                                </PortfolioItem>
+        
+                                <PortfolioItem
+                                    Image={ResultDirect1}
+                                    action={setVisibleFour}
+                                    className={firstIn ? ' show-content' : ''}
+                                >
+                                    <h5>RESULT DIRECT</h5>
+                                    <p>HTML / CSS / Javascript</p>
+                                </PortfolioItem>
 
-                        <PortfolioItem
-                            Image={Result2}
-                            action={setVisibleTwo}
-                            className={firstIn ? ' show-content' : ''}
-                        >
-                            <h5>SCHOOL RESULT SOLUTION</h5>
-                            <p>Symfony / React</p>
-                        </PortfolioItem>
-                        
-                        <PortfolioItem
-                            Image={Fee1}
-                            action={setVisibleThree}
-                            className={firstIn ? ' show-content' : ''}
-                        >
-                            <h5>FEES MANAGEMENT SYSTEM</h5>
-                            <p>PHP MVC / Javascript</p>
-                        </PortfolioItem>
+                                <PortfolioItem
+                                    Image={GithubPage}
+                                    action={setVisibleFive}
+                                    className={firstIn ? ' show-content' : ''}
+                                >
+                                    <h5>GITHUB PROFILE PAGE</h5>
+                                    <p>HTML / SASS / Javascript / GRAPHQL</p>
+                                </PortfolioItem>
+                            </> : 
+                            <>
 
-                        <PortfolioItem
-                            Image={ResultDirect1}
-                            action={setVisibleFour}
-                            className={firstIn ? ' show-content' : ''}
-                        >
-                            <h5>RESULT DIRECT</h5>
-                            <p>HTML / CSS / Javascript</p>
-                        </PortfolioItem>
+                                <PortfolioItem
+                                    Image={OneBurnerImage}
+                                    liveURL="https://oneburner-by-devugo.netlify.app/"
+                                    githubURL="https://github.com/devugo/oneburner"
+                                    type="website"
+                                    className={firstIn ? ' show-content' : ''}
+                                >
+                                    <h5>SAAS WEBSITE </h5>
+                                    <p>HTML / CSS / Javascript</p>
+                                </PortfolioItem>
 
-                        <PortfolioItem
-                            Image={Landing1}
-                            action={setVisibleFive}
-                            className={firstIn ? ' show-content' : ''}
-                        >
-                            <h5>LANDING PAGE</h5>
-                            <p>HTML / CSS / Javascript</p>
-                        </PortfolioItem>
+                                 <PortfolioItem
+                                    Image={ArtistImage}
+                                    liveURL="https://artist-portfolio-by-devugo.netlify.app/"
+                                    githubURL="https://github.com/devugo/artist-portfolio/"
+                                    type="website"
+                                    className={firstIn ? ' show-content' : ''}
+                                >
+                                    <h5>ARTIST PORTFOLIO </h5>
+                                    <p>HTML / CSS / Javascript</p>
+                                </PortfolioItem>
 
-                        <PortfolioItem
-                            Image={ReactPag1}
-                            action={setVisibleSix}
-                            className={firstIn ? ' show-content' : ''}
-                        >
-                            <h5>REACT JS PAGINATION</h5>
-                            <p>React</p>
-                        </PortfolioItem>
+                                <PortfolioItem
+                                    Image={DesignerImage}
+                                    liveURL="https://designer-portfolio-by-devugo.netlify.app/"
+                                    githubURL="https://github.com/devugo/designer-portfolio"
+                                    type="website"
+                                    className={firstIn ? ' show-content' : ''}
+                                >
+                                    <h5>DESIGNER PORTFOLIO </h5>
+                                    <p>HTML / CSS / Javascript</p>
+                                </PortfolioItem>
+
+                                <PortfolioItem
+                                    Image={CreoImage}
+                                    liveURL="https://codelyne-creo-template-by-devugo.netlify.app/"
+                                    githubURL=""
+                                    type="website"
+                                    className={firstIn ? ' show-content' : ''}
+                                >
+                                    <h5>LANDING PAGE </h5>
+                                    <p>HTML / CSS / Javascript</p>
+                                </PortfolioItem>
+                            </>
+                        }
+                       
                     </div>
                 </div>
             </div>
@@ -167,7 +210,6 @@ const Portfolio = props => {
                 centered={true}
                 footer={null}
                 width={width > 1024 ? '80%' : width > 767 ? '90%' : width > 360 ? '95%' : '100%'}
-                // bodyStyle={{ backgroundColor: !light ? '#161f2e' : 'white', color: !light ? 'white' : 'grey'}}
             >
                 <div className="modal-body">
                     <div className="modal-body__content">
@@ -211,7 +253,7 @@ const Portfolio = props => {
                             <Tag color="orange">React</Tag>
                         </div><br />
                         <div className="modal-body__content-buttons">
-                            <a href="http://cbt.devugo.com" className="btn" target="_blank" rel="noopener noreferrer"><i className="fa fa-eye"></i> Live Demo</a>
+                            <a href="http://cbt.devugo.com" className="btn" target="_blank" rel="noopener noreferrer"><i className="fa fa-eye"></i> Live</a>
                         </div><br />
                     </div>
                     <div className="modal-body__images">
@@ -230,54 +272,41 @@ const Portfolio = props => {
                 centered={true}
                 footer={null}
                 width={width > 1024 ? '80%' : width > 767 ? '90%' : width > 360 ? '95%' : '100%'}
-                // bodyStyle={{ backgroundColor: !light ? '#161f2e' : 'white', color: !light ? 'white' : 'grey'}}
             >
                 <div className="modal-body">
                     <div className="modal-body__content">
-                        <h3 className="portfolio-modal-title">SCHOOL RESULT SOLUTION</h3>
+                        <h3 className="portfolio-modal-title">SALES COMMISSION MANAGEMENT SYSTEM</h3>
                         <p>
-                            Result solution to manage results in schools; teachers are able to upload 
-                            results of students and the students are able to check the result online using designated pins.
+                            Sales commision managemnt system for managing sales of affiliates and commisions.
                         </p>
                         <p>
                             Features of this application are as follows; The application have different levels of 
                             users as explained below;
                         </p>
                         <p>
-                            <span className="user-type">Super admin </span> or 
-                            <span className="user-type"> school owner</span> is able to create and manage pins manually or 
-                            automatically by specifying the number required to generate. School owner is also able to 
-                            create and manage classes, arms, sessions, terms and subjects
+                            <span className="user-type">Amin </span> or 
+                            <span className="user-type"> Affiliate</span> is able to submits sales and expect payments from the admin.
 
                         </p>
                         <p>
-                            The <span className="user-type">Admin user </span> is creates and amnages the teachers, the students, subjects, 
-                            assign teachers to subjects classes etc.
-                        </p>
-                        <p>
-                            The <span className="user-type">Teacher user</span> is only responsible for uplaoding results of students 
-                            based on the subject classes assigned by the <span className="user-type">admin</span>.
-                        </p>
-                        <p>
-                            The final user is the <span className="user-type">student user</span>. They are able to check their result using 
-                            a pin generated by the super admin. 
+                            The <span className="user-type">Admin user </span> verifies an affilliate and awards payments.
                         </p>
                         <div className="modal-body__content-stacks">
                             <Tag color="orange">HTML</Tag>
                             <Tag color="orange">CSS</Tag>
-                            <Tag color="orange">Symfony</Tag>
-                            <Tag color="orange">React</Tag>
+                            <Tag color="orange">Laravel</Tag>
+                            <Tag color="orange">Javascript</Tag>
                         </div><br />
                         <div className="modal-body__content-buttons">
-                            <a href="http://resultsolution.devugo.com/details" target="_blank" rel="noopener noreferrer" className="btn"><i className="fa fa-eye"></i> Live Demo</a>
+                            <a href="http://brawtavacations.com/" target="_blank" rel="noopener noreferrer" className="btn"><i className="fa fa-eye"></i> Live</a>
                         </div><br />
                     </div>
                     <div className="modal-body__images">
-                        <img className={activeSlide === 1 ? 'active-slide' : ''} src={Result1} alt="result solution" />
-                        <img className={activeSlide === 2 ? 'active-slide' : ''} src={Result2} alt="result solution" />
-                        <img  className={activeSlide === 3 ? 'active-slide' : ''} src={Result3} alt="result solution" />
-                        <img  className={activeSlide === 4 ? 'active-slide' : ''} src={Result4} alt="result solution" />
-                        <img  className={activeSlide === 5 ? 'active-slide' : ''} src={Result5} alt="result solution" />
+                        <img className={activeSlide === 1 ? 'active-slide' : ''} src={Sale1} alt="sales comission" />
+                        <img className={activeSlide === 2 ? 'active-slide' : ''} src={Sale2} alt="sales comission" />
+                        <img  className={activeSlide === 3 ? 'active-slide' : ''} src={Sale3} alt="sales comission" />
+                        <img  className={activeSlide === 4 ? 'active-slide' : ''} src={Sale1} alt="sales comission" />
+                        <img  className={activeSlide === 5 ? 'active-slide' : ''} src={Sale2} alt="sales comission" />
                     </div>
                 </div>
             </Modal>
@@ -288,7 +317,6 @@ const Portfolio = props => {
                 centered={true}
                 footer={null}
                 width={width > 1024 ? '80%' : width > 767 ? '90%' : width > 360 ? '95%' : '100%'}
-                // bodyStyle={{ backgroundColor: !light ? '#161f2e' : 'white', color: !light ? 'white' : 'grey'}}
             >
                 <div className="modal-body">
                     <div className="modal-body__content">
@@ -318,7 +346,7 @@ const Portfolio = props => {
                             <Tag color="orange">Javascript</Tag>
                         </div><br />
                         <div className="modal-body__content-buttons">
-                            <a href="http://fees.devugo.com" target="_blank" rel="noopener noreferrer" className="btn"><i className="fa fa-eye"></i> Live Demo</a>
+                            <a href="http://fees.devugo.com" target="_blank" rel="noopener noreferrer" className="btn"><i className="fa fa-eye"></i> Live</a>
                         </div><br />
                     </div>
                     <div className="modal-body__images">
@@ -338,7 +366,6 @@ const Portfolio = props => {
                 footer={null}
                 width={width > 1024 ? '80%' : width > 767 ? '90%' : width > 360 ? '95%' : '100%'}
                 className="devugo-sample-modal"
-                // bodyStyle={{ backgroundColor: !light ? '#161f2e' : 'white', color: !light ? 'white' : 'grey'}}
             >
                 <div className="modal-body">
                     <div className="modal-body__content">
@@ -370,7 +397,7 @@ const Portfolio = props => {
                             <Tag color="orange">PHP</Tag>
                         </div><br />
                         <div className="modal-body__content-buttons">
-                            <a className="btn" rel="opener" href="http://resultdirect.org" target="_blank" rel="noopener noreferrer"><i className="fa fa-eye"></i>View Live</a>
+                            <a className="btn" rel="opener" href="http://resultdirect.org" target="_blank" rel="noopener noreferrer"><i className="fa fa-eye"></i>Live</a>
                         </div><br />
                     </div>
                     <div className="modal-body__images">
@@ -389,73 +416,32 @@ const Portfolio = props => {
                 centered={true}
                 footer={null}
                 width={width > 1024 ? '80%' : width > 767 ? '90%' : width > 360 ? '95%' : '100%'}
-                // bodyStyle={{ backgroundColor: !light ? '#161f2e' : 'white', color: !light ? 'white' : 'grey'}}
             >
                 <div className="modal-body">
                     <div className="modal-body__content">
-                        <h3 className="portfolio-modal-title">LANDING PAGE</h3>
+                        <h3 className="portfolio-modal-title">GITHUB PROFILE PAGE</h3>
                         <p>
-                        A single landing page designed that shows information about a firm and its products.
+                        An app that displays the profile page of a github user using the GRAPHQL API.
                         </p>
                         <p>
                             Features of this application are as follows; 
                         </p>
                         <p>
-                            A home page that shows a brief description of the compnay's works, an about page that 
-                            shows information about the company, what they do and how they do it, service section 
-                            that list the various services which the company offers, a projects section; shows a
-                            list of various projects the compnay has successfully carried out, a contact section where 
-                            a potential customer can quickly reach out to them via the contact form. 
+                            List 20 public repositories and their details of an utheticated user using the personnal token as well as some basic user details.
                         </p>
                         <div className="modal-body__content-stacks">
                             <Tag color="orange">HTML</Tag>
-                            <Tag color="orange">CSS</Tag>
+                            <Tag color="orange">SASS</Tag>
                             <Tag color="orange">Javascript</Tag>
-                            <Tag color="orange">Bootstrap</Tag>
+                            <Tag color="orange">GraphQL</Tag>
                         </div><br />
                         <div className="modal-body__content-buttons">
-                            <a className="btn" rel="opener" href="https://devugo.com" target="_blank" rel="noopener noreferrer"><i className="fa fa-eye"></i> View Live</a>
+                            <a className="btn" rel="opener" href="https://github-profile-by-devugo.netlify.app/" target="_blank" rel="noopener noreferrer"><i className="fa fa-eye"></i> Live</a>
+                            <a style={{marginLeft: 10}} className="btn code" rel="opener" href="https://github.com/devugo/github-profile-page" target="_blank" rel="noopener noreferrer"><i className="fa fa-eye"></i> Code</a>
                         </div><br />
                     </div>
                     <div className="modal-body__images">
-                        <img className={activeSlide === 1 ? 'active-slide' : ''} src={Landing1} alt="lading page" />
-                        <img className={activeSlide === 2 ? 'active-slide' : ''} src={Landing2} alt="lading page" />
-                        <img  className={activeSlide === 3 ? 'active-slide' : ''} src={Landing3} alt="lading page" />
-                        <img  className={activeSlide === 4 ? 'active-slide' : ''} src={Landing4} alt="lading page" />
-                        <img  className={activeSlide === 5 ? 'active-slide' : ''} src={Landing5} alt="lading page" />
-                    </div>
-                </div>
-            </Modal>
-
-            <Modal
-                visible={visibleSix}
-                onCancel={() => setVisibleSix(false)}
-                centered={true}
-                footer={null}
-                width={width > 1024 ? '80%' : width > 767 ? '90%' : width > 360 ? '95%' : '100%'}
-                // bodyStyle={{ backgroundColor: !light ? '#161f2e' : 'white', color: !light ? 'white' : 'grey'}}
-            >
-                <div className="modal-body">
-                    <div className="modal-body__content">
-                        <h3 className="portfolio-modal-title">REACT JS PAGINATION</h3>
-                        <p>
-                            React Js pagination for react applications
-                        </p>
-                        <div className="modal-body__content-stacks">
-                            <Tag color="orange">React</Tag>
-                            <Tag color="orange">HTML</Tag>
-                            <Tag color="orange">CSS</Tag>
-                        </div><br />
-                        <div className="modal-body__content-buttons">
-                            <a className="btn" target="_blank" rel="noopener noreferrer" href="https://github.com/devugo/reactjs-pagination"><i className="fa fa-code"></i> View Code</a>
-                        </div><br />
-                    </div>
-                    <div className="modal-body__images">
-                        <img className={activeSlide === 1 ? 'active-slide' : ''} src={ReactPag1} alt="rweact-pagination" />
-                        <img className={activeSlide === 2 ? 'active-slide' : ''} src={ReactPag2} alt="rweact-pagination" />
-                        <img  className={activeSlide === 3 ? 'active-slide' : ''} src={ReactPag3} alt="rweact-pagination" />
-                        <img  className={activeSlide === 4 ? 'active-slide' : ''} src={ReactPag4} alt="rweact-pagination" />
-                        <img  className={activeSlide === 5 ? 'active-slide' : ''} src={ReactPag5} alt="rweact-pagination" />
+                        <img className={activeSlide === 1 || activeSlide === 2 || activeSlide === 3 || activeSlide === 4 || activeSlide === 5 ? 'active-slide' : ''} src={GithubPage} alt="github profile" />
                     </div>
                 </div>
             </Modal>
