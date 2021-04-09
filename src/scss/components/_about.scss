@@ -32,35 +32,108 @@
             background-color: var(--bgColor2);
             @include transition-ease;
 
-            &-img {
+            &-bio {
                 margin-top: 40px;
+                padding: 10px;
                 img {
                     width: 60%;
                 }
-            }
 
-            &-description {
-                padding-left: 10px;
-                padding-right: 10px;
-                .summary {
-                    padding: 5px;
-                    color: var(--aboutSummaryColor);
-                    @include transition-ease;
+                &__summary {
+                    margin-top: 20px;
                     p {
-                        font-size: 18px;
+                        color: var(--aboutSummaryColor);
+                        @include transition-ease;
+                    }
+                    .skills-icons {
+                        .tag-me {
+                            -webkit-animation-name: skills_zoom; /* Chrome, Safari, Opera */
+                            -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+                            -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+                            -webkit-animation-direction: alternate; /* Chrome, Safari, Opera */
+                            animation-name: skills_zoom;
+                            animation-duration: 2s;
+                            animation-iteration-count: infinite;
+                            animation-direction: alternate;
+                            margin: 5px;
+                        }
                     }
                 }
-                .skills-icons {
-                    .tag-me {
-                        -webkit-animation-name: skills_zoom; /* Chrome, Safari, Opera */
-                        -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
-                        -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
-                        -webkit-animation-direction: alternate; /* Chrome, Safari, Opera */
-                        animation-name: skills_zoom;
-                        animation-duration: 2s;
-                        animation-iteration-count: infinite;
-                        animation-direction: alternate;
-                        margin: 5px;
+            }
+
+            &-resume {
+                padding-left: 10px;
+                padding-right: 10px;
+
+                .resume-title {
+                    h3 {
+                        font-weight: bold;
+                        color: var(--aboutSummaryColor);
+                        @include transition-ease;
+                    }
+                }
+               
+                .work-history {
+                    max-height: 450px;
+                    overflow-y: scroll;
+                    color: var(--aboutSummaryColor);
+                    @include transition-ease;
+                    .single-work {
+                        position: relative;
+                        border-bottom: 2px solid black;
+                        border-bottom-style: dotted;
+                        margin-bottom: 20px;
+                        padding: 5px;
+
+                        &__title {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                        }
+
+                        h4, h5, p {
+                            color: var(--aboutSummaryColor);
+                            @include transition-ease;
+                        }
+
+                        h4.position {
+                            font-weight: bold;
+                            font-style: italic;
+                        }
+
+                        h5.organization {
+                            margin-top: -5px;
+                            font-weight: bold;
+                        }
+                        p.date-period {
+                            font-size: 12px;
+                            font-style: italic;
+                        }
+
+                        &::after {
+                            height: 100%;
+                            content: '';
+                            position: absolute;
+                            width: 2px;
+                            background: blue;
+                            left: -20px;
+                            top: 0;
+                        }
+
+                        &::before {
+                            height: 10px;
+                            content: '';
+                            position: absolute;
+                            width: 10px;
+                            border-radius: 50%;
+                            background: red;
+                            left: -24px;
+                            top: 0;
+                        }
+
+                        ul {
+                            margin-left: 20px;
+                        }
                     }
                 }
                 
@@ -108,11 +181,13 @@
                 margin: 50px auto auto auto;
                 padding: 20px 20px 25px 20px;
 
-                &-img {
+                &-bio {
                     width: 50%;
                     margin-top: 0px;
+                    padding: 30px;
                     // background-color: grey;
                     display: flex;
+                    flex-direction: column;
                     align-items: center;
                     justify-content: center;
 
@@ -121,8 +196,16 @@
                     }
                 }
 
-                &-description {
+                &-resume {
                     width: 50%;
+
+                    .work-history {
+                        .single-work {
+                            ul {
+                                margin-left: 30px;
+                            }
+                        }
+                    }
 
                     .download {
                         margin-bottom: 20px;
