@@ -58,8 +58,8 @@ const About = () => {
                                     <div className="accomplishemnts">
                                         <h5>Achievements</h5>
                                         <ul>
-                                            <li>Built a mobile expense app (both android and ios compatible) for the parent group to manage expenses within the organization using React Native.</li>
-                                            <li>Migrated static site to a dynamic site using React and Strapi JS</li>
+                                            <li>Built a mobile expense app (both android and ios compatible) for the parent group to manage expenses within the organization.</li>
+                                            <li>Migrated static site to a dynamic site, adding CMS to it.</li>
                                         </ul>
                                     </div>
                                     <div className="tools">
@@ -78,7 +78,7 @@ const About = () => {
                                         <h5 className="organization">Emplug Ltd.</h5>
                                     </div>
                                     <div className="date-period-container">
-                                        <p className="date-period">Jun 2019 - Jan 2021</p>
+                                        <p className="date-period">Jun 2019 - Dec 2020</p>
                                     </div>
                                 </div>
                                 <div className="job-description">
@@ -87,7 +87,7 @@ const About = () => {
                                         <ul>
                                             <li>Design the overall architecture of applications.</li>
                                             <li>Responsible for building UIs and Client's side of an application.</li>
-                                            <li>Developing restfula dn graphql APIs</li>
+                                            <li>Developing restful and graphql APIs.</li>
                                             <li>Testing, troubleshooting and debugging of applications.</li>
                                             <li>Fixing and maintaining of existing applications.</li>
                                         </ul>
@@ -96,10 +96,10 @@ const About = () => {
                                         <h5>Achievements</h5>
                                         <ul>
                                             <li>I was involved in the development of a Computer Based Test (CBT) application which we used all over 
-the nation in conducting large scale recruitment exercises like that of the NDLEA</li>
+the nation in conducting large scale recruitment exercises like that of the NDLEA.</li>
                                             <li> I was also involved in the development of a 
 job application portal; for the management of recruitment processes (the jobs and applications). Being a full stack developer
-got me involved in both tiers of development i.e. Front end and Back end</li>
+got me involved in both tiers of development i.e. Front end and Back end.</li>
                                         </ul>
                                     </div>
                                     <div className="tools">
@@ -118,7 +118,7 @@ got me involved in both tiers of development i.e. Front end and Back end</li>
                                         <h5 className="organization">Upwork and Fiverr.</h5>
                                     </div>
                                     <div className="date-period-container">
-                                        <p className="date-period">Feb 2018 - Jan 2019</p>
+                                        <p className="date-period">Feb 2018 - Jun 2019</p>
                                     </div>
                                 </div>
                                 <div className="job-description">
@@ -128,7 +128,7 @@ got me involved in both tiers of development i.e. Front end and Back end</li>
                                             <li>Responsible for designing, coding and modifying websites, from layout to function according to a client's specifications.</li>
                                             <li> Create visually appealing sites that feature user-friendly design and clear navigation.
 </li>
-                                            <li>Fixing problems within existing projects etc</li>
+                                            <li>Fixing problems within existing projects etc.</li>
                                         </ul>
                                     </div>
                                     <div className="accomplishemnts">
