@@ -37,7 +37,7 @@ import OneBurnerImage from '../../images/websites/oneburner.jpg';
 
 let currSlide = 1;
 
-const Portfolio = props => {
+const Portfolio = () => {
     const width = useWindowWidth();
 
     const [visibleOne, setVisibleOne] = useState(false);
@@ -58,17 +58,11 @@ const Portfolio = props => {
             let fromTop = window.scrollY;
 
             if(newRef){
-                // console.log(newRef.current.offsetTop);
-                // console.log(window.innerHeight);
                 if(newRef.current.offsetTop - window.innerHeight <= fromTop){
                     setFirstIn(true);
-                    // document.getElementById('about').classList.add('slide-in');
                 }else{
                     setFirstIn(false);
                 }
-              
-                // console.log(newRef.current.offsetTop);
-                // console.log(newRef.current.offsetHeight);
             }
         }
         window.addEventListener('scroll', scroller);
@@ -97,7 +91,7 @@ const Portfolio = props => {
             <div className="portfolio-container wrapper">
                 <h3 className="section-title short-underline" id="portfolio-title">PORTFOLIO</h3>
                 <div className="portfolio-container__do center-content">
-                    <p id="portfolio-sub__title">Some of the works done in the past are as follows;</p>
+                    <p id="portfolio-sub__title">Some of the personnal/side works done in the past are as follows;</p>
                 </div>
                 <div className="portfolio-container-desktop__body">
                     <div className="buttons">
@@ -397,7 +391,7 @@ const Portfolio = props => {
                             <Tag color="orange">PHP</Tag>
                         </div><br />
                         <div className="modal-body__content-buttons">
-                            <a className="btn" rel="opener" href="http://resultdirect.org" target="_blank" rel="noopener noreferrer"><i className="fa fa-eye"></i>Live</a>
+                            <a className="btn" href="http://resultdirect.org" target="_blank" rel="noopener noreferrer"><i className="fa fa-eye"></i>Live</a>
                         </div><br />
                     </div>
                     <div className="modal-body__images">
@@ -436,8 +430,8 @@ const Portfolio = props => {
                             <Tag color="orange">GraphQL</Tag>
                         </div><br />
                         <div className="modal-body__content-buttons">
-                            <a className="btn" rel="opener" href="https://github-profile-by-devugo.netlify.app/" target="_blank" rel="noopener noreferrer"><i className="fa fa-eye"></i> Live</a>
-                            <a style={{marginLeft: 10}} className="btn code" rel="opener" href="https://github.com/devugo/github-profile-page" target="_blank" rel="noopener noreferrer"><i className="fa fa-eye"></i> Code</a>
+                            <a className="btn" href="https://github-profile-by-devugo.netlify.app/" target="_blank" rel="noopener noreferrer"><i className="fa fa-eye"></i> Live</a>
+                            <a style={{marginLeft: 10}} className="btn code" href="https://github.com/devugo/github-profile-page" target="_blank" rel="noopener noreferrer"><i className="fa fa-eye"></i> Code</a>
                         </div><br />
                     </div>
                     <div className="modal-body__images">
