@@ -22,12 +22,12 @@ const About = () => {
                                 <Tag className="tag-me" color="purple">HTML</Tag>
                                 <Tag className="tag-me" color="blue">CSS</Tag>
                                 <Tag className="tag-me" color="magenta">Javascript</Tag>
+                                <Tag className="tag-me" color="yellow">Typescript</Tag>
                                 <Tag className="tag-me" color="red">React Js</Tag>
                                 <Tag className="tag-me" color="volcano">React Native</Tag>
                                 <Tag className="tag-me" color="orange">PHP</Tag>
                                 <Tag className="tag-me" color="gold">Symfony</Tag>
                                 <Tag className="tag-me" color="green">Laravel</Tag>
-                                <Tag className="tag-me" color="yellow">SQL</Tag>
                             </div>
                         </div>
                     </div>
@@ -58,13 +58,14 @@ const About = () => {
                                     <div className="accomplishemnts">
                                         <h5>Achievements</h5>
                                         <ul>
-                                            <li>Built a mobile expense app for the parent group to manage expenses within the organization.</li>
+                                            <li>Built a mobile expense app (both android and ios compatible) for the parent group to manage expenses within the organization using React Native.</li>
+                                            <li>Migrated static site to a dynamic site using React and Strapi JS</li>
                                         </ul>
                                     </div>
                                     <div className="tools">
                                         <h5>Tools</h5>
                                         <ul>
-                                            <li>HTML, CSS, Javascript, React, React Native, Strapi JS, Node JS, Docker, AWS etc.</li>
+                                            <li>Javascript, Typescript, React JS, React Native, Strapi JS, Node JS, Docker etc.</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -104,7 +105,7 @@ got me involved in both tiers of development i.e. Front end and Back end</li>
                                     <div className="tools">
                                         <h5>Tools</h5>
                                         <ul>
-                                            <li>HTML, CSS, Javascript, React, PHP, Symfony, Firebase etc.</li>
+                                            <li>Javascript, React JS, PHP, Symfony, Firebase etc.</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -140,7 +141,7 @@ got me involved in both tiers of development i.e. Front end and Back end</li>
                                     <div className="tools">
                                         <h5>Tools</h5>
                                         <ul>
-                                            <li>HTML, CSS, Javascript, React, PHP, Laravel etc.</li>
+                                            <li>HTML, CSS, Javascript, React JS, PHP, Laravel etc.</li>
                                         </ul>
                                     </div>
                                 </div>

@@ -38,6 +38,11 @@
                     &:active, &:focus {
                         outline-color: var(--primaryColor);
                     }
+
+                    &:hover {
+                        @include transition-ease;
+                        opacity: 0.8;
+                    }
                 }
             }
         }

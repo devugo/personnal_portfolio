@@ -18,8 +18,8 @@ export const PortfolioItem = ({ Image, action, className, type, liveURL, githubU
                             <button onClick={() => action(true)}>LEARN MORE</button> 
                             :
                             <>
-                            <a className="github" href={githubURL} target="_blank">GITHUB</a>
-                            <a className="live" href={liveURL} target="_blank">LIVE</a>
+                            <a className="github" href={githubURL} target="_blank" rel="noreferrer">GITHUB</a>
+                            <a className="live" href={liveURL} target="_blank" rel="noreferrer">LIVE</a>
                             </>
                     }
                 </div>

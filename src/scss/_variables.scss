@@ -60,6 +60,9 @@ html {
 
     --footerTopBgColor: var(--veryDarkGray);
     --footerBottomBgColor: rgb(22, 21, 21);
+
+    --scrollBarColor: var(--primaryColor);
+    --scrollBaHroverColor: #ffac1d;
 }
 
 //  DARK THEME
@@ -110,6 +113,9 @@ html[data-theme='dark'] {
     
     --footerTopBgColor: var(--bgColor1);
     --footerBottomBgColor: var(--bgColor2);
+
+    --scrollBarColor: var(--veryDarkGray);
+    --scrollBaHroverColor: rgb(38, 43, 38);
 }
 
 body {
