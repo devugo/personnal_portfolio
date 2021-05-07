@@ -21,9 +21,6 @@ const Services = () => {
                 }else{
                     setFirstIn(false);
                 }
-              
-                // console.log(newRef.current.offsetTop);
-                // console.log(newRef.current.offsetHeight);
             }
         }
         window.addEventListener('scroll', scroller);
@@ -60,7 +57,7 @@ const Services = () => {
                             <h5 className="service-title">Mobile Development</h5>
                             <p>
                                I build robust mobile apps using React Native with a clean user 
-                               interface and experience. 
+                               interface and experience. Scalable apps that works across both platforms i.e android and ios.
                             </p>
                         </Card>
                         <Card className={`services-card${firstIn ? ' show-content' : ''}`}>

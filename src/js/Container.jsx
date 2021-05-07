@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-// import LazyLoad from 'react-lazyload';
 
 import Header from './components/Header';
 import Home from './components/Home';
@@ -9,8 +8,7 @@ import Portfolio from './components/Porfolio';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Icons from './components/Icons';
-
-// const Services = lazy(() => import('./components/Services'));
+import Blog from './components/Blog';
 
 const Container = () => {
     const loadedRef = useRef(null);
@@ -46,7 +44,6 @@ const Container = () => {
 
                 mainNavs.forEach(link => {
                     let section = document.querySelector(link.hash);
-                    // console.log(section)
 
                     let ctrl = 0;
                     
@@ -74,13 +71,9 @@ const Container = () => {
             <Header ref={loadedRef} open={open} setOpen={setOpen} floatingNav={floatingNav} />
             <Home />
             <About />
-            {/* <Suspense fallback={<div>Loading...</div>}> */}
-                {/* <LazyLoad placeholder={<div>Loading...</div>}> */}
-                    <Services />
-                {/* </LazyLoad> */}
-            {/* </Suspense> */}
+            <Services />
             <Portfolio />
-            {/* <Experience /> */}
+            <Blog />
             <Contact />
             <Footer />
             <Icons />

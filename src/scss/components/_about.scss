@@ -12,11 +12,7 @@
 }
 
 .about {
-    // background-color: var(--textColor3);
     opacity: 5;
-    // transform: skewY(4deg);
-    // margin-top: -22px;
-    // padding: 1.2rem 0;
     @include transition-ease;
 
     &-container {
@@ -80,7 +76,7 @@
                     @include transition-ease;
                     .single-work {
                         position: relative;
-                        border-bottom: 2px solid black;
+                        border-bottom: 2px solid var(--darkGray);
                         border-bottom-style: dotted;
                         margin-bottom: 20px;
                         padding: 5px;
@@ -91,8 +87,12 @@
                             align-items: center;
                         }
 
+                        .job-description {
+                            margin-top: 10px;
+                        }
+
                         h4, h5, p {
-                            color: var(--aboutSummaryColor);
+                            color: var(--servicesCardTitleColor);
                             @include transition-ease;
                         }
 
@@ -149,7 +149,7 @@
                     }
                 }
 
-                @for $i from 1 through 8 {
+                @for $i from 1 through 9 {
                     .tag-me:nth-child(#{$i}) {
                         animation-delay: ( $i * 1s - 1s);
                     }
