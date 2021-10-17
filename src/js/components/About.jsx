@@ -19,15 +19,15 @@ const About = () => {
                                 and designing web pages, applications across various platforms.
                             </p>
                             <div className="skills-icons">
-                                <Tag className="tag-me" color="purple">HTML</Tag>
-                                <Tag className="tag-me" color="blue">CSS</Tag>
+                                {/* <Tag className="tag-me" color="purple">HTML</Tag>
+                                <Tag className="tag-me" color="blue">CSS</Tag> */}
                                 <Tag className="tag-me" color="magenta">Javascript</Tag>
-                                <Tag className="tag-me" color="yellow">Typescript</Tag>
+                                <Tag className="tag-me" color="blue">Typescript</Tag>
                                 <Tag className="tag-me" color="red">React Js</Tag>
                                 <Tag className="tag-me" color="volcano">React Native</Tag>
-                                <Tag className="tag-me" color="orange">PHP</Tag>
+                                <Tag className="tag-me" color="green">Nest Js</Tag>
+                                {/* <Tag className="tag-me" color="orange">PHP</Tag> */}
                                 <Tag className="tag-me" color="gold">Symfony</Tag>
-                                <Tag className="tag-me" color="green">Laravel</Tag>
                             </div>
                         </div>
                     </div>
@@ -50,22 +50,22 @@ const About = () => {
                                     <div className="responsiblities">
                                         <h5>Responsibilities</h5>
                                         <ul>
-                                            <li>Developed mobile app utilizing React native cross platform capabilities to build for both platforms.</li>
-                                            <li>Developed robust APIs and applications.</li>
-                                            <li>Convert UI designs and templates to code.</li>
+                                            <li>Responsible for developing cross platform applications using React Native.</li>
+                                            <li>Responsible for converting UI designs templates to code.</li>
+                                            <li>Responsible for building and development of web solutions and applications.</li>
                                         </ul>
                                     </div>
                                     <div className="accomplishemnts">
                                         <h5>Achievements</h5>
                                         <ul>
-                                            <li>Built a mobile expense app (both android and ios compatible) for the parent group to manage expenses within the organization.</li>
-                                            <li>Migrated static site to a dynamic site, adding CMS to it.</li>
+                                            <li>Built an expense mobile app (both android and ios compatible) for the parent group to manage expenses within the organization.</li>
+                                            <li>Migrated existing static site to a dynamic site, making it a full CMS by utilizing StrapiJS as a backend service.</li>
                                         </ul>
                                     </div>
                                     <div className="tools">
                                         <h5>Tools</h5>
                                         <ul>
-                                            <li>Javascript, Typescript, React JS, React Native, Strapi JS, Node JS, Docker etc.</li>
+                                            <li>Javascript, Typescript, React JS, React Native, Strapi JS, Nest JS, and Docker.</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -85,11 +85,10 @@ const About = () => {
                                     <div className="responsiblities">
                                         <h5>Responsibilities</h5>
                                         <ul>
-                                            <li>Design the overall architecture of applications.</li>
+                                            <li>Responsible for designing the overall architecture of applications.</li>
                                             <li>Responsible for building UIs and Client's side of an application.</li>
-                                            <li>Developing restful and graphql APIs.</li>
-                                            <li>Testing, troubleshooting and debugging of applications.</li>
-                                            <li>Fixing and maintaining of existing applications.</li>
+                                            <li>Responsible for developing restful and graphql APIs.</li>
+                                            <li>Responsible for testing, troubleshooting and debugging of applications.</li>
                                         </ul>
                                     </div>
                                     <div className="accomplishemnts">
@@ -105,7 +104,7 @@ got me involved in both tiers of development i.e. Front end and Back end.</li>
                                     <div className="tools">
                                         <h5>Tools</h5>
                                         <ul>
-                                            <li>Javascript, React JS, PHP, Symfony, Firebase etc.</li>
+                                            <li>Javascript, React JS, PHP, Symfony, and Firebase.</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -126,9 +125,9 @@ got me involved in both tiers of development i.e. Front end and Back end.</li>
                                         <h5>Responsibilities</h5>
                                         <ul>
                                             <li>Responsible for designing, coding and modifying websites, from layout to function according to a client's specifications.</li>
-                                            <li> Create visually appealing sites that feature user-friendly design and clear navigation.
+                                            <li>Responsible for creating visually appealing sites that feature user-friendly design and clear navigation.
 </li>
-                                            <li>Fixing problems within existing projects etc.</li>
+                                            <li>Responsible for fixing problems within existing applications.</li>
                                         </ul>
                                     </div>
                                     <div className="accomplishemnts">
@@ -141,7 +140,7 @@ got me involved in both tiers of development i.e. Front end and Back end.</li>
                                     <div className="tools">
                                         <h5>Tools</h5>
                                         <ul>
-                                            <li>HTML, CSS, Javascript, React JS, PHP, Laravel etc.</li>
+                                            <li>Javascript, React JS, PHP, and Laravel.</li>
                                         </ul>
                                     </div>
                                 </div>

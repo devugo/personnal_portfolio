@@ -5,16 +5,9 @@ import useWindowWidth from '../helpers/hooks/useWindowWidth';
 import { PortfolioItem } from '../ui-elements/PortfolioItem';
 
 import CBT1 from '../../images/cbt_images/image1.png';
-import CBT2 from '../../images/cbt_images/image2.png';
 import CBT3 from '../../images/cbt_images/image3.png';
 import CBT4 from '../../images/cbt_images/image4.png';
 import CBT5 from '../../images/cbt_images/image5.png';
-
-import Fee1 from '../../images/fees_images/image1.png';
-import Fee2 from '../../images/fees_images/image2.png';
-import Fee3 from '../../images/fees_images/image3.png';
-import Fee4 from '../../images/fees_images/image4.png';
-import Fee5 from '../../images/fees_images/image5.png';
 
 import ResultDirect1 from '../../images/result_direct_images/image1.png';
 import ResultDirect2 from '../../images/result_direct_images/image2.png';
@@ -25,6 +18,15 @@ import ResultDirect5 from '../../images/result_direct_images/image5.png';
 import Sale1 from '../../images/sales_comission_management/image1.jpg';
 import Sale2 from '../../images/sales_comission_management/image2.jpg';
 import Sale3 from '../../images/sales_comission_management/image3.jpg';
+
+import Storexplore1 from '../../images/storexplore_images/image1.png';
+import Storexplore2 from '../../images/storexplore_images/image2.png';
+import Storexplore3 from '../../images/storexplore_images/image3.png';
+import Storexplore4 from '../../images/storexplore_images/image4.png';
+
+import TaskManagement1 from '../../images/task_management_images/image1.png';
+import TaskManagement2 from '../../images/task_management_images/image2.png';
+import TaskManagement3 from '../../images/task_management_images/image3.png';
 
 
 import GithubPage from '../../images/github_images/github.jpg';
@@ -45,6 +47,7 @@ const Portfolio = () => {
     const [visibleThree, setVisibleThree] = useState(false);
     const [visibleFour, setVisibleFour] = useState(false);
     const [visibleFive, setVisibleFive] = useState(false);
+    const [visibleSix, setVisibleSix] = useState(false);
     const [activeSlide, setActiveSlide] = useState(1);
 
     const [portfolioState, setPortfolioState] = useState('apps');
@@ -91,7 +94,7 @@ const Portfolio = () => {
             <div className="portfolio-container wrapper">
                 <h3 className="section-title short-underline" id="portfolio-title">PORTFOLIO</h3>
                 <div className="portfolio-container__do center-content">
-                    <p id="portfolio-sub__title">Some of the personnal/side works done in the past are as follows;</p>
+                    <p id="portfolio-sub__title">Some of the personnal works done in the past are as follows;</p>
                 </div>
                 <div className="portfolio-container-desktop__body">
                     <div className="buttons">
@@ -103,12 +106,28 @@ const Portfolio = () => {
                             portfolioState === 'apps' ?
                             <>
                                 <PortfolioItem
-                                    Image={CBT2}
+                                    Image={Storexplore2}
+                                    action={setVisibleThree}
+                                    className={firstIn ? ' show-content' : ''}
+                                >
+                                    <h5>STOREXPLORE</h5>
+                                    <p>React JS / Express JS / Typescript</p>
+                                </PortfolioItem>
+                                <PortfolioItem
+                                    Image={TaskManagement1}
+                                    action={setVisibleSix}
+                                    className={firstIn ? ' show-content' : ''}
+                                >
+                                    <h5>TASK MANAGEMENT APP</h5>
+                                    <p>React JS / Nest JS / Typescript</p>
+                                </PortfolioItem>
+                                <PortfolioItem
+                                    Image={CBT1}
                                     action={setVisibleOne}
                                     className={firstIn ? ' show-content' : ''}
                                 >
                                     <h5>WEB BASED CBT APP</h5>
-                                    <p>Symfony / React / Redux</p>
+                                    <p>Symfony / React JS / Redux</p>
                                 </PortfolioItem>
         
                                 <PortfolioItem
@@ -119,15 +138,6 @@ const Portfolio = () => {
                                     <h5>SALES COMISSION MANAGEMENT SYSTEM</h5>
                                     <p>Laravel / Javascript</p>
                                 </PortfolioItem>
-                                
-                                <PortfolioItem
-                                    Image={Fee1}
-                                    action={setVisibleThree}
-                                    className={firstIn ? ' show-content' : ''}
-                                >
-                                    <h5>FEES MANAGEMENT SYSTEM</h5>
-                                    <p>PHP MVC / Javascript</p>
-                                </PortfolioItem>
         
                                 <PortfolioItem
                                     Image={ResultDirect1}
@@ -135,7 +145,7 @@ const Portfolio = () => {
                                     className={firstIn ? ' show-content' : ''}
                                 >
                                     <h5>RESULT DIRECT</h5>
-                                    <p>HTML / CSS / Javascript</p>
+                                    <p>Javascript / PHP</p>
                                 </PortfolioItem>
 
                                 <PortfolioItem
@@ -144,7 +154,7 @@ const Portfolio = () => {
                                     className={firstIn ? ' show-content' : ''}
                                 >
                                     <h5>GITHUB PROFILE PAGE</h5>
-                                    <p>HTML / SASS / Javascript / GRAPHQL</p>
+                                    <p>Javascript / GRAPHQL</p>
                                 </PortfolioItem>
                             </> : 
                             <>
@@ -252,10 +262,10 @@ const Portfolio = () => {
                     </div>
                     <div className="modal-body__images">
                         <img className={activeSlide === 1 ? 'active-slide' : ''} src={CBT1} alt="cbt app" />
-                        <img className={activeSlide === 2 ? 'active-slide' : ''} src={CBT2} alt="cbt app" />
-                        <img className={activeSlide === 3 ? 'active-slide' : ''} src={CBT3} alt="cbt app" />
+                        <img className={activeSlide === 2 ? 'active-slide' : ''} src={CBT5} alt="cbt app" />
+                        <img className={activeSlide === 3 ? 'active-slide' : ''} src={CBT1} alt="cbt app" />
                         <img className={activeSlide === 4 ? 'active-slide' : ''} src={CBT4} alt="cbt app" />
-                        <img className={activeSlide === 5 ? 'active-slide' : ''} src={CBT5} alt="cbt app" />
+                        <img className={activeSlide === 5 ? 'active-slide' : ''} src={CBT3} alt="cbt app" />
                     </div>
                 </div>
             </Modal>
@@ -314,41 +324,49 @@ const Portfolio = () => {
             >
                 <div className="modal-body">
                     <div className="modal-body__content">
-                        <h3 className="portfolio-modal-title">FEES MANAGEMENT SYSTEM</h3>
+                        <h3 className="portfolio-modal-title">STOREXPLORE</h3>
                         <p>
-                            Fees management system to manage all expenses and incomes in schools espcially the fees in a school; 
-                            School admin is able to create fees and messages dispatched to guardians it may concern
+                            Storexplore is a store managmeent system for managing store and products. 
                         </p>
                         <p>
                             Features of this application are as follows; The application have different levels of 
                             users as explained below;
                         </p>
                         <p>
-                            The<span className="user-type"> School admin</span> is able to create and manage students and guardians and 
-                            also assigning students to their respective guardians. Also creates school structure i.e classes, arm, and terms. 
-                            The<span className="user-type"> School admin</span> is also able to create different school fees and various expenses i.e 
-                            fees created are dispatched to guardians it concerns via sms, emails and notification. The <span className="user-type">Admin</span> can also broadcast maessages 
-                            to guardians also generate report of activities on the portal.
+                            The<span className="user-type"> Store owner</span> is able to create and manage store and  products in the store. Also sale managers are created by the store owners for recording daily sales.
+                            The<span className="user-type"> Sale managers</span> are responsible for recording sales made daily.
                         </p>
                         <p>
-                            The <span className="user-type">Guardian user </span> is able to view students registered in his name and also fees available ( fees yet to be paid ), able to upload proof of fees payment or rather, pay fees online.
+                            The <span className="user-type">Store owner </span>and <span className="user-type">Sale managers </span> are able to communicate using the real time chat feature for more detailed discussions on sales or as the case may be.
+                        </p>
+                        <p>
+                            <span className="user-type">Test credentials: </span> 
+                        </p>
+                        <p>
+                            <b>ADMIN</b> {' '}
+                            <span className="user-type">Email: </span> test@gmail.com {' '}
+                            <span className="user-type">Password: </span> Password1234
+                        </p>
+                        <p>
+                            <b>SALE MANAGER</b> {' '}
+                            <span className="user-type">Email: </span> michael@gmail.com {' '}
+                            <span className="user-type">Password: </span> Password1234
                         </p>
                         <div className="modal-body__content-stacks">
-                            <Tag color="orange">HTML</Tag>
-                            <Tag color="orange">CSS</Tag>
-                            <Tag color="orange">PHP MVC</Tag>
                             <Tag color="orange">Javascript</Tag>
+                            <Tag color="orange">Express</Tag>
+                            <Tag color="orange">Typescript</Tag>
                         </div><br />
                         <div className="modal-body__content-buttons">
-                            <a href="http://fees.devugo.com" target="_blank" rel="noopener noreferrer" className="btn"><i className="fa fa-eye"></i> Live</a>
+                        <a className="btn" href="https://storexplore-by-devugo.netlify.app/" target="_blank" rel="noopener noreferrer"><i className="fa fa-eye"></i> Live</a>
+                            <a style={{marginLeft: 10}} className="btn code" href="https://github.com/devugo/storexplore-web-client" target="_blank" rel="noopener noreferrer"><i className="fa fa-eye"></i> Code</a>
                         </div><br />
                     </div>
                     <div className="modal-body__images">
-                        <img className={activeSlide === 1 ? 'active-slide' : ''} src={Fee1} alt="fees management" />
-                        <img className={activeSlide === 2 ? 'active-slide' : ''} src={Fee2} alt="fees management" />
-                        <img  className={activeSlide === 3 ? 'active-slide' : ''} src={Fee3} alt="fees management" />
-                        <img  className={activeSlide === 4 ? 'active-slide' : ''} src={Fee4} alt="fees management" />
-                        <img  className={activeSlide === 5 ? 'active-slide' : ''} src={Fee5} alt="fees management" />
+                        <img className={activeSlide === 1 || activeSlide === 4 ? 'active-slide' : ''} src={Storexplore1} alt="storexplore" />
+                        <img className={activeSlide === 2 ? 'active-slide' : ''} src={Storexplore2} alt="storexplore" />
+                        <img  className={activeSlide === 3 ? 'active-slide' : ''} src={Storexplore3} alt="storexplore" />
+                        <img  className={activeSlide === 5 ? 'active-slide' : ''} src={Storexplore4} alt="storexplore" />
                     </div>
                 </div>
             </Modal>
@@ -436,6 +454,50 @@ const Portfolio = () => {
                     </div>
                     <div className="modal-body__images">
                         <img className={activeSlide === 1 || activeSlide === 2 || activeSlide === 3 || activeSlide === 4 || activeSlide === 5 ? 'active-slide' : ''} src={GithubPage} alt="github profile" />
+                    </div>
+                </div>
+            </Modal>
+
+            <Modal
+                visible={visibleSix}
+                onCancel={() => setVisibleSix(false)}
+                centered={true}
+                footer={null}
+                width={width > 1024 ? '80%' : width > 767 ? '90%' : width > 360 ? '95%' : '100%'}
+            >
+                <div className="modal-body">
+                    <div className="modal-body__content">
+                        <h3 className="portfolio-modal-title">TASK MANAGEMENT APP</h3>
+                        <p>
+                        This is an app use basically to maanage your day to day activities or tasks and everything in one place.
+                        </p>
+                        <p>
+                            Features of this application are as follows; 
+                        </p>
+                        <p>
+                            You have the ability to add tasks, mark tasks as complete, reschedule tasks, group tasks by projects and labels and many more.
+                        </p>
+                        <p>
+                            <span className="user-type">Test credentials: </span> 
+                        </p>
+                        <p>
+                            <span className="user-type">Email: </span> test@gmail.com {' '}
+                            <span className="user-type">Password: </span> Password1234
+                        </p>
+                        <div className="modal-body__content-stacks">
+                            <Tag color="orange">Typescript</Tag>
+                            <Tag color="orange">React</Tag>
+                            <Tag color="orange">Nest JS</Tag>
+                        </div><br />
+                        <div className="modal-body__content-buttons">
+                            <a className="btn" href="https://task-management-by-devugo.netlify.app/" target="_blank" rel="noopener noreferrer"><i className="fa fa-eye"></i> Live</a>
+                            <a style={{marginLeft: 10}} className="btn code" href="https://github.com/devugo/task-management-web-client" target="_blank" rel="noopener noreferrer"><i className="fa fa-eye"></i> Code</a>
+                        </div><br />
+                    </div>
+                    <div className="modal-body__images">
+                        <img  className={activeSlide === 1 || activeSlide === 3 ? 'active-slide' : ''} src={TaskManagement1} alt="task management" />
+                        <img  className={activeSlide === 2 || activeSlide === 5 ? 'active-slide' : ''} src={TaskManagement2} alt="task management" />
+                        <img  className={activeSlide === 4 ? 'active-slide' : ''} src={TaskManagement3} alt="task management" />
                     </div>
                 </div>
             </Modal>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 
-import ProfileImage from '../../images/profile_picture.jpeg';
+import ProfileImage from '../../images/my-photo.jfif';;
 
 const skills = ['SOFTWARE DEVELOPER.', 'JAVASCRIPT DEVELOPER.', 'PHP DEVELOPER.'];
 
@@ -14,8 +14,6 @@ const Home = props => {
     const [timOut, setTimOut] = useState(false);
 
     const [slideIn, setSLideIn] = useState(false);
-
-    // let { open } = props;
 
     let i = 0;
     let speed = 30;
@@ -31,7 +29,6 @@ const Home = props => {
                         setTimOut(false);
                         setCurrentSkill(prevState => prevState.slice(0, -1));
                         i++;
-                        // ryb = false;
                         setTimeout(typeWriter, speed);
                     }else{
                         if(skills.length > curr + 1){
@@ -107,8 +104,7 @@ const Home = props => {
                     <h4>Ezenwankwo Ugochukwu</h4>
                     <p className="skill">I'm a <span>{currentSkill}</span></p>
                     <p className="bio"> Problem solving, responsive designs, robust APIs and scalabale softwares, testing and maintenace of applications.</p>
-                    {/* <a target="_blank" rel="noopener noreferrer" href="https://www.upwork.com/freelancers/~011c8bdfb541a568e5?viewMode=1" className="btn">GET IN TOUCH</a> */}
-                    <a target="_blank" rel="noopener noreferrer" href="mailto: info@devugo.com" className="btn">GET IN TOUCH</a>
+                    <a target="_blank" rel="noopener noreferrer" href="mailto: ugonnaezenwankwo@gmail.com" className="btn">GET IN TOUCH</a>
                 </div>
                 <div className="home-column__profile">
                     <div className="home-column__profile-image">

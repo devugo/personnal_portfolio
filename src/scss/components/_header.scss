@@ -1,6 +1,7 @@
 header {
-    // margin-top: 100px;
-    // padding-top: -100px;
+    ::-webkit-scrollbar {
+        display: none !important;
+    }
     .navbar {
         position: fixed;
         top: 0;
@@ -48,7 +49,7 @@ header {
     }
     & .hamburger {
         position: fixed;
-        right: 1rem;
+        right: 1.6rem;
         top: 1rem;
         width: 25px;
         height:25px;
@@ -57,49 +58,20 @@ header {
         z-index: 4;
         @include transition-ease;
 
-        &:hover {
-            opacity: 0.8;
-        }
-
-        /* when nav drawer is closed */
-        &.false:hover span::after {
-            top: 1.5rem;
-        }
-        
-        &.false:hover span::before {
-            top: 0.8rem;
-        }
-        /* when nav drawer is closed */
-
-        /* when nav drawer is closed */
-        &.open:hover {
-            right: 1.5rem;
-        }
-        &.open:hover span::after {
-            width: 40px;
-        }
-        
-        &.open:hover span::before {
-            width: 40px;
-        }
-        /* when nav drawer is closed */
-
         &__stick {
             position: absolute;
-            height: 5px;
+            height: 2px;
             width: 20px;
             background-color: var(--textColor2);
-            top: 0;
+            top: 0.3rem;
             left: 0;
             @include transition-ease;
 
             &.open {
-                width: 30px;
                 background: transparent;
-                top: -0.3rem;
 
                 &::before {
-                    top: 1rem;
+                    top: 0.8rem;
                     transform: rotate(45deg);
                 }
                 &::after {
@@ -110,9 +82,9 @@ header {
             &::before {
                 content: '';
                 position: absolute;
-                height: 5px;
+                height: 2px;
                 width: 25px;
-                top: 0.5rem;
+                top: 0.4rem;
                 left: 0;
                 background-color: var(--gray);
                 @include transition-ease;
@@ -121,9 +93,9 @@ header {
             &::after{
                 content: '';
                 position: absolute;
-                height: 5px;
+                height: 2px;
                 width: 25px;
-                top: 1rem;
+                top: 0.8rem;
                 left: 0;
                 background-color: var(--gray);
                 @include transition-ease;
@@ -154,7 +126,6 @@ header {
             flex-direction: column;
             align-items: center;
             @include transition-ease;
-            // margin-top: 10vh;
             
             &-top {
                 width: 100%;
@@ -166,12 +137,10 @@ header {
                     width: 100%;
                     justify-content: space-around;
                     text-align: center;
-                    // overflow-y: scroll;
                     color: var(--textColor3);
                     padding-bottom: 40px;
                     padding-top: 80px;
                     @include transition-ease;
-                    // transform: skewY(100deg);
                     transform: translateY(-100vh);
                     transition-delay: 0.5s;
 
@@ -229,7 +198,7 @@ header {
                             a{
                                 @include transition-ease;
                                 color: inherit;
-                                font-size: 13px;
+                                font-size: 15px;
                                 color: var(--headerNavMiddleColor);
                             }
                         }
@@ -277,14 +246,10 @@ header {
     }
 
     header {
-       .navbar {
+        .navbar {
             display: flex;
             justify-content: space-between;
-            width: 100%; 
-            // background-color: red;
-            // margin: 0 auto;
-            // width: 100vw !important;
-            // margin-left: 100px;
+            width: 100%;
 
             img {
                 width: 40px;
@@ -327,7 +292,7 @@ header {
                     }
                 }
             }
-       }
+        }
     }   
 }
 

@@ -3,7 +3,6 @@ import React, { forwardRef } from 'react';
 import ProfileAvatar from '../../images/profile_avatar.png';
 
 const Header = forwardRef((props, ref) => {
-    // console.log(ref);
    let { open, setOpen, floatingNav } = props;
 
     return (
@@ -44,7 +43,7 @@ const Header = forwardRef((props, ref) => {
                         <div className={`profile-info ${open && 'open'}`} id="profile-info">
                             <img src={ProfileAvatar} alt="devugo" />
                             <h5>Ezenwankwo Ugochukwu</h5>
-                            <p>PHP and Javascript developer</p>
+                            <p>Software developer</p>
                         </div>
                         <nav id="nav-mobile">
                             <ul>
