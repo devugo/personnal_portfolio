@@ -127,7 +127,7 @@ const Portfolio = () => {
                                     className={firstIn ? ' show-content' : ''}
                                 >
                                     <h5>WEB BASED CBT APP</h5>
-                                    <p>Symfony / React JS / Redux</p>
+                                    <p>Symfony / React JS</p>
                                 </PortfolioItem>
         
                                 <PortfolioItem
@@ -251,8 +251,6 @@ const Portfolio = () => {
                             time spent in exam, no of questions answered and unanswered, questions passed and failed, exam score, questions review etc.
                         </p>
                         <div className="modal-body__content-stacks">
-                            <Tag color="orange">HTML</Tag>
-                            <Tag color="orange">CSS</Tag>
                             <Tag color="orange">Symfony</Tag>
                             <Tag color="orange">React</Tag>
                         </div><br />
@@ -296,8 +294,6 @@ const Portfolio = () => {
                             The <span className="user-type">Admin user </span> verifies an affilliate and awards payments.
                         </p>
                         <div className="modal-body__content-stacks">
-                            <Tag color="orange">HTML</Tag>
-                            <Tag color="orange">CSS</Tag>
                             <Tag color="orange">Laravel</Tag>
                             <Tag color="orange">Javascript</Tag>
                         </div><br />
@@ -353,7 +349,7 @@ const Portfolio = () => {
                             <span className="user-type">Password: </span> Password1234
                         </p>
                         <div className="modal-body__content-stacks">
-                            <Tag color="orange">Javascript</Tag>
+                            <Tag color="orange">React</Tag>
                             <Tag color="orange">Express</Tag>
                             <Tag color="orange">Typescript</Tag>
                         </div><br />
@@ -403,8 +399,6 @@ const Portfolio = () => {
                             The final user is the <span className="user-type">student user</span>. They are able to check their result using scratch cards.
                         </p>
                         <div className="modal-body__content-stacks">
-                            <Tag color="orange">HTML</Tag>
-                            <Tag color="orange">CSS</Tag>
                             <Tag color="orange">Javascript</Tag>
                             <Tag color="orange">PHP</Tag>
                         </div><br />
@@ -442,8 +436,6 @@ const Portfolio = () => {
                             List 20 public repositories and their details of an utheticated user using the personnal token as well as some basic user details.
                         </p>
                         <div className="modal-body__content-stacks">
-                            <Tag color="orange">HTML</Tag>
-                            <Tag color="orange">SASS</Tag>
                             <Tag color="orange">Javascript</Tag>
                             <Tag color="orange">GraphQL</Tag>
                         </div><br />
