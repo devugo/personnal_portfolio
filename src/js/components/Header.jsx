@@ -26,6 +26,7 @@ const Header = forwardRef((props, ref) => {
                             <a className="link_tag" href="#portfolio">Portfolio</a>
                         </li>
                         <li>
+                            {/* Class was removed because it throws an error on scroll */}
                             <a href="https://blog.devugo.com" target="_blank" rel="noreferrer">Blog</a>
                         </li>
                         <li>
