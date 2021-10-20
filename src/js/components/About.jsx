@@ -26,7 +26,7 @@ const About = () => {
                                 <Tag className="tag-me" color="red">React Js</Tag>
                                 <Tag className="tag-me" color="volcano">React Native</Tag>
                                 <Tag className="tag-me" color="green">Nest Js</Tag>
-                                {/* <Tag className="tag-me" color="orange">PHP</Tag> */}
+                                <Tag className="tag-me" color="orange">PHP</Tag>
                                 <Tag className="tag-me" color="gold">Symfony</Tag>
                             </div>
                         </div>
@@ -147,7 +147,7 @@ got me involved in both tiers of development i.e. Front end and Back end.</li>
                             </div>
                         </div>
                         <div className="download">
-                            <a className="btn" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1vMHHTqo0BCbs6_om1-olSorcDqwq1dkL/view?usp=sharing">VIEW CV</a>
+                            <a className="btn" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1G07OFYXnpBxo-g5tiXk9dwsMWrSgoRqs/view?usp=sharing">VIEW CV</a>
                         </div>
                     </div>
                 </div>
